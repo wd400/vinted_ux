@@ -1,0 +1,212 @@
+{
+"welcome": "Welcome to React with i18n and Tailwind CSS!",
+
+
+  "LandingPage.title": "Vinted Analytics",
+  "LandingPage.newBadge": "New",
+  "LandingPage.subtitle": "Boost Your Vinted Like a Pro",
+  "LandingPage.featuresSectionTitle": "Answer All Your Questions with Data",
+  "LandingPage.topSellingProductsTitle": "Top Selling Products",
+  "LandingPage.topSellingProductsDesc": "Discover the current top-selling categories at the highest prices",
+  "LandingPage.hotBrandNichesTitle": "New Brand Niches",
+  "LandingPage.hotBrandNichesDesc": "Analyze the brands that have recently gained popularity",
+  "LandingPage.mostExpensiveBrandsTitle": "Most Expensive Brands",
+  "LandingPage.mostExpensiveBrandsDesc": "Reveal the latest brands selling at the highest prices",
+  "LandingPage.optimizeProfileTitle": "Optimize Your Profile",
+  "LandingPage.announcesThatSellTitle": "Listings that Sell",
+  "LandingPage.announcesThatSellDesc": "Photos and descriptions that enable faster sales at higher prices for all your items",
+  "LandingPage.topPerformersTitle": "Top Sellers",
+  "LandingPage.topPerformersDesc": "Discover the top Vinted sellers to learn from their strategies and top products",
+  "LandingPage.priceEstimationTitle": "Price Estimation",
+  "LandingPage.priceEstimationDesc": "Estimate the best selling price of your items through global sales history",
+  "LandingPage.moreFeaturesTitle": "And More...",
+  "LandingPage.trendingColorsTitle": "Trending Colors",
+  "LandingPage.trendingColorsDesc": "Observe the most popular color trends on Vinted",
+  "LandingPage.mostExpensiveProductsTitle": "Most Expensive Products",
+  "LandingPage.mostExpensiveProductsDesc": "Discover the latest high-priced items sold on Vinted",
+  "LandingPage.moreFeaturesComingSoon": "More features coming soon!",
+  "LandingPage.ctaTitle": "Start Today",
+  "LandingPage.ctaSubtitle": "Limited public launch to the first 100 users. Sign up now to secure your spot!",
+  "LandingPage.ctaButton": "Unlock All",
+  "LandingPage.noCommitmentSubscription": "no-commitment subscription",
+  "LandingPage.faq": "FAQ",
+  "LandingPage.contact": "Contact",
+
+  "LandingPage.userReview": "Vinted Analytics transformed how I sell. Highly recommend!",
+"LandingPage.userReviewPro":"Pro Vinted Seller",
+
+
+
+"AnnounceGridDisplay.no_announces": "Too specific, no announces found",
+
+
+
+
+"BrandSelector.select_brand": "Select a Brand",
+"BrandSelector.search_placeholder": "Search for a brand",
+"BrandSelector.loading": "Loading...",
+
+
+
+"CatalogSelector.heading": "Select a Catalog",
+"CatalogSelector.selectButton": "Select",
+"CatalogSelector.backButton": "Back",
+
+
+
+
+
+"FeatureCard.proFeature": "Pro feature",
+
+
+
+"ImageGallery.show_more": "Show More",
+"ImageGallery.show_less": "Show Less",
+
+"LoginButton.login_button_text": "Sign up | Log in",
+
+
+
+"LoginPopup.log_in": "Log In",
+"LoginPopup.email_placeholder": "Email",
+"LoginPopup.loading": "Loading...",
+"LoginPopup.check_your_email": "Check your email! ⤴",
+"LoginPopup.send_magic_link": "Send magic link",
+
+
+
+"PriceDistributionChart.quantity": "Quantity",
+"PriceDistributionChart.priceDistributionTitle": "Price Distribution Histogram of Sold Items",
+"PriceDistributionChart.notEnoughData": "Not enough data yet to display the price distribution",
+
+
+
+
+
+
+"ProStatus.loading": "Loading...",
+"ProStatus.proUser": "You are a Pro user!",
+"ProStatus.manageAccount": "Manage your account",
+"ProStatus.notProUser": "You are not a Pro user",
+"ProStatus.unlockAnalytics": "Unlock Vinted Analytics",
+
+
+
+"Navigation.Analytics": "Analytics",
+"Navigation.MoveToVinted": "Move to Vinted",
+"Navigation.MyStatus": "My Status",
+"Navigation.Logout": "Logout",
+
+
+
+
+"ExpensiveProducts.title": "Expensive Products",
+"ExpensiveProducts.selectTimeFrame": "Select Time Frame:",
+"ExpensiveProducts.weekly": "Weekly",
+"ExpensiveProducts.monthly": "Monthly",
+"ExpensiveProducts.yearly": "Yearly",
+
+
+  "ColorTrends.title": "Popular Colors Progression",
+  "ColorTrends.dashboardTitle": "Popular Colors Dashboard",
+  "ColorTrends.aggregationType": "Aggregation Type",
+  "ColorTrends.week": "Week",
+  "ColorTrends.month": "Month",
+
+  
+    "BrandSales.trendTitle": "Brand Sales Trend",
+    "BrandSales.lastMonthSales": "Last Month Sales",
+    "BrandSales.avgPreviousThreeMonthsSales": "Average Previous Three Months Sales",
+    "BrandSales.histogramTitle": "Brand Sales Histogram",
+    "BrandSales.brandColumn": "Brand",
+    "BrandSales.lastMonthSalesColumn": "Last Month Sales",
+    "BrandSales.avgPreviousThreeMonthsSalesColumn": "Average Previous Three Months Sales",
+    "BrandSales.salesDifferenceColumn": "Sales Difference",
+    "Sidebar.latestSoldItemsTitle": "Latest Sold Items",
+    "Sidebar.subtitleFor": "for",
+
+    
+
+      "AccountPage.title": "My Account",
+
+      
+        "mostExpensiveBrands.title": "Most Expensive Brands",
+        "mostExpensiveBrands.description": "Most expensive brands based on the average price of items sold on Vinted last year.",
+        "mostExpensiveBrands.brand": "Brand",
+        "mostExpensiveBrands.averagePrice": "Average Price",
+        "mostExpensiveBrands.quantity": "Quantity",
+        "sidebar.latestItemsFor": "Latest Items for",
+        "sidebar.latestItems": "Latest Items",
+
+
+        
+          "PriceEstimation.title": "Price Estimation",
+          "PriceEstimation.sidebarTitle": "Latest Items Sold",
+        
+
+          
+            "SalesTrendDashboard.title": "Sales Dashboard",
+            "SalesTrendDashboard.last_3_days": "Last 3 days",
+            "SalesTrendDashboard.last_30_days": "Last 30 days",
+            "SalesTrendDashboard.group_by_product": "Group by Product",
+            "SalesTrendDashboard.group_by_category": "Group by Category",
+            "SalesTrendDashboard.group_by_brand": "Group by Brand",
+            "SalesTrendDashboard.order_by_count": "Order by Count",
+            "SalesTrendDashboard.order_by_mean_price": "Order by Mean Price",
+            "SalesTrendDashboard.order_by_total_price": "Order by Total Price",
+            "SalesTrendDashboard.top10": "Top 10",
+            "SalesTrendDashboard.products": "Products",
+            "SalesTrendDashboard.categories": "Categories",
+            "SalesTrendDashboard.brands": "Brands",
+            "SalesTrendDashboard.by": "by",
+            "SalesTrendDashboard.count": "Count",
+            "SalesTrendDashboard.mean_price": "Mean Price",
+            "SalesTrendDashboard.total_price": "Total Price",
+            "SalesTrendDashboard.label_na": "N/A",
+            "SalesTrendDashboard.label_count": "Count",
+            "SalesTrendDashboard.label_mean_price": "Mean Price",
+            "SalesTrendDashboard.label_sum_price": "Total Price",
+            "SalesTrendDashboard.label_mean_sold_days": "Mean Sold Days",
+            "SalesTrendDashboard.error_categories": "Error fetching categories:",
+            "SalesTrendDashboard.error_sales": "Error fetching sales trend:",
+            "SalesTrendDashboard.error_latest": "Error fetching latest products:",
+            "SalesTrendDashboard.sidebar_title": "Latest Sold Items",
+            "SalesTrendDashboard.sidebar_subtitle": "Select a performer",
+          
+
+            
+
+            
+              "TopAnnounces.title": "Top Announces",
+
+
+
+                  "TopPerformers.title": "Top Performers Dashboard",
+                  "TopPerformers.last3Days": "Last 3 days",
+                  "TopPerformers.last30Days": "Last 30 days",
+                  "TopPerformers.orderByTotalPrice": "Order by Total Price",
+                  "TopPerformers.orderByTotalSold": "Order by Total Sold",
+                  "TopPerformers.totalPrice": "Total Price",
+                  "TopPerformers.totalSold": "Total Sold",
+                  "TopPerformers.latestSoldItems": "Latest Sold Items",
+                  "TopPerformers.forUser": "for",
+                  "TopPerformers.selectPerformer": "Select a performer",
+                  "TopPerformers.unknownUser": "N/A",
+                  "TopPerformers.chartTitle": "Top Performers by {{orderBy}}"
+
+            
+            
+          
+        
+      
+      
+    
+    
+
+
+
+
+
+
+}
+

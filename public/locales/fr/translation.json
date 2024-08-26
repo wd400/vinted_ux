@@ -1,0 +1,177 @@
+{ "welcome": "Bienvenue sur React avec i18n et Tailwind CSS!",
+
+
+"LandingPage.title": "Vinted Analytics",
+"LandingPage.newBadge": "Nouveau",
+"LandingPage.subtitle": "Boostez votre Vinted comme un Pro",
+"LandingPage.featuresSectionTitle": "Répondez à toutes vos questions par la data",
+"LandingPage.topSellingProductsTitle": "Produits les plus Vendus",
+"LandingPage.topSellingProductsDesc": "Découvrez les catégories actuelles qui se vendent le mieux, au prix le plus élevé",
+"LandingPage.hotBrandNichesTitle": "Nouvelles Niches de Marques",
+"LandingPage.hotBrandNichesDesc": "Analysez les marques qui gagnent récemment en popularité",
+"LandingPage.mostExpensiveBrandsTitle": "Marques les Plus Chères",
+"LandingPage.mostExpensiveBrandsDesc": "Révélez les dernières marques qui se vendent le plus cher",
+"LandingPage.optimizeProfileTitle": "Optimisez Votre Profil",
+"LandingPage.announcesThatSellTitle": "Annonces qui Vendent",
+"LandingPage.announcesThatSellDesc": "Les photos et descriptions qui permettent des ventes plus rapides, à des prix plus élevés pour tous vos articles",
+"LandingPage.topPerformersTitle": "Meilleurs Vendeurs",
+"LandingPage.topPerformersDesc": "Découvrez les meilleurs vendeurs Vinted pour apprendre de leurs stratégies, leurs top produits",
+"LandingPage.priceEstimationTitle": "Estimation des Prix",
+"LandingPage.priceEstimationDesc": "Estimez le meilleur prix de vente de vos articles via l'historique des ventes globales",
+"LandingPage.moreFeaturesTitle": "Et Plus...",
+"LandingPage.trendingColorsTitle": "Couleurs Tendance",
+"LandingPage.trendingColorsDesc": "Observez les tendances des couleurs les plus populaires sur Vinted",
+"LandingPage.mostExpensiveProductsTitle": "Produits les Plus Chers",
+"LandingPage.mostExpensiveProductsDesc": "Découvrez les derniers articles les plus chers vendus sur Vinted",
+"LandingPage.moreFeaturesComingSoon": "Plus de fonctionnalités bientôt disponibles !",
+"LandingPage.ctaTitle": "Commencez Dès Aujourd'hui",
+"LandingPage.ctaSubtitle": "Lancement public limité aux 100 premiers utilisateurs. Inscrivez-vous maintenant pour sécuriser votre place !",
+"LandingPage.ctaButton": "Déverrouiller Tout",
+"LandingPage.noCommitmentSubscription": "abonnement sans engagement",
+"LandingPage.faq": "FAQ",
+"LandingPage.contact": "Contact",
+
+
+
+"LandingPage.userReview": "Vinted Analytics a transformé ma façon de vendre. Je recommande vivement !",
+"LandingPage.userReviewPro": "Vendeur Pro Vinted",
+
+
+"AnnounceGridDisplay.no_announces": "Trop spécifique, aucune annonce trouvée",
+
+"BrandSelector.select_brand": "Sélectionnez une Marque",
+"BrandSelector.search_placeholder": "Recherchez une marque",
+"BrandSelector.loading": "Chargement...",
+
+"CatalogSelector.heading": "Sélectionnez un Catalogue",
+"CatalogSelector.selectButton": "Sélectionner",
+"CatalogSelector.backButton": "Retour",
+
+"FeatureCard.proFeature": "Fonctionnalité Pro",
+
+"ImageGallery.show_more": "Afficher Plus",
+"ImageGallery.show_less": "Afficher Moins",
+
+"LoginButton.login_button_text": "S'inscrire | Se Connecter",
+
+"LoginPopup.log_in": "Connexion",
+"LoginPopup.email_placeholder": "Email",
+"LoginPopup.loading": "Chargement...",
+"LoginPopup.check_your_email": "Vérifiez votre email ! ⤴",
+"LoginPopup.send_magic_link": "Envoyer le lien magique",
+
+"PriceDistributionChart.quantity": "Quantité",
+"PriceDistributionChart.priceDistributionTitle": "Histogramme de Distribution des Prix des Articles Vendus",
+"PriceDistributionChart.notEnoughData": "Pas encore assez de données pour afficher la distribution des prix",
+
+"ProStatus.loading": "Chargement...",
+"ProStatus.proUser": "Vous êtes un utilisateur Pro !",
+"ProStatus.manageAccount": "Gérer votre compte",
+"ProStatus.notProUser": "Vous n'êtes pas un utilisateur Pro",
+"ProStatus.unlockAnalytics": "Déverrouiller Vinted Analytics",
+
+"Navigation.Analytics": "Analytics",
+"Navigation.MoveToVinted": "Aller sur Vinted",
+"Navigation.MyStatus": "Mon Statut",
+"Navigation.Logout": "Déconnexion",
+
+"ExpensiveProducts.title": "Produits Chers",
+"ExpensiveProducts.selectTimeFrame": "Sélectionnez la Période :",
+"ExpensiveProducts.weekly": "Hebdomadaire",
+"ExpensiveProducts.monthly": "Mensuel",
+"ExpensiveProducts.yearly": "Annuel",
+
+"ColorTrends.title": "Progression des Couleurs Populaires",
+"ColorTrends.dashboardTitle": "Tableau de Bord des Couleurs Populaires",
+"ColorTrends.aggregationType": "Type d'Agrégation",
+"ColorTrends.week": "Semaine",
+"ColorTrends.month": "Mois",
+
+"BrandSales.trendTitle": "Tendance des Ventes de Marques",
+"BrandSales.lastMonthSales": "Ventes du Mois Dernier",
+"BrandSales.avgPreviousThreeMonthsSales": "Moyenne des Ventes des Trois Mois Précédents",
+"BrandSales.histogramTitle": "Histogramme des Ventes de Marques",
+"BrandSales.brandColumn": "Marque",
+"BrandSales.lastMonthSalesColumn": "Ventes du Mois Dernier",
+"BrandSales.avgPreviousThreeMonthsSalesColumn": "Moyenne des Ventes des Trois Mois Précédents",
+"BrandSales.salesDifferenceColumn": "Différence de Ventes",
+"Sidebar.latestSoldItemsTitle": "Derniers Articles Vendus",
+"Sidebar.subtitleFor": "pour",
+
+
+
+"AccountPage.title": "Mon Compte",
+
+
+"mostExpensiveBrands.title": "Marques les Plus Chères",
+"mostExpensiveBrands.description": "Marques les plus chères en fonction du prix moyen des articles vendus sur Vinted l'année dernière.",
+"mostExpensiveBrands.brand": "Marque",
+"mostExpensiveBrands.averagePrice": "Prix Moyen",
+"mostExpensiveBrands.quantity": "Quantité",
+"sidebar.latestItemsFor": "Derniers Articles pour",
+"sidebar.latestItems": "Derniers Articles",
+
+
+
+"PriceEstimation.title": "Estimation des Prix",
+"PriceEstimation.sidebarTitle": "Derniers Articles Vendus",
+
+
+
+"SalesTrendDashboard.title": "Tableau de Bord des Ventes",
+"SalesTrendDashboard.last_3_days": "Derniers 3 jours",
+"SalesTrendDashboard.last_30_days": "Derniers 30 jours",
+"SalesTrendDashboard.group_by_product": "Grouper par Produit",
+"SalesTrendDashboard.group_by_category": "Grouper par Catégorie",
+"SalesTrendDashboard.group_by_brand": "Grouper par Marque",
+"SalesTrendDashboard.order_by_count": "Trier par Nombre",
+"SalesTrendDashboard.order_by_mean_price": "Trier par Prix Moyen",
+"SalesTrendDashboard.order_by_total_price": "Trier par Prix Total",
+"SalesTrendDashboard.top10": "Top 10",
+"SalesTrendDashboard.products": "Produits",
+"SalesTrendDashboard.categories": "Catégories",
+"SalesTrendDashboard.brands": "Marques",
+"SalesTrendDashboard.by": "par",
+"SalesTrendDashboard.count": "Nombre",
+"SalesTrendDashboard.mean_price": "Prix Moyen",
+"SalesTrendDashboard.total_price": "Prix Total",
+"SalesTrendDashboard.label_na": "N/A",
+"SalesTrendDashboard.label_count": "Nombre",
+"SalesTrendDashboard.label_mean_price": "Prix Moyen",
+"SalesTrendDashboard.label_sum_price": "Prix Total",
+"SalesTrendDashboard.label_mean_sold_days": "Nombre de Jours Moyen pour Vendre",
+"SalesTrendDashboard.error_categories": "Erreur lors de la récupération des catégories :",
+"SalesTrendDashboard.error_sales": "Erreur lors de la récupération des tendances de vente :",
+"SalesTrendDashboard.error_latest": "Erreur lors de la récupération des derniers produits :",
+"SalesTrendDashboard.sidebar_title": "Derniers Articles Vendus",
+"SalesTrendDashboard.sidebar_subtitle": "Sélectionnez un vendeur",
+
+
+
+
+
+"TopAnnounces.title": "Top Annonces",
+
+
+
+"TopPerformers.title": "Tableau de Bord des Meilleurs Vendeurs",
+"TopPerformers.last3Days": "Derniers 3 jours",
+"TopPerformers.last30Days": "Derniers 30 jours",
+"TopPerformers.orderByTotalPrice": "Trier par Prix Total",
+"TopPerformers.orderByTotalSold": "Trier par Total Vendu",
+"TopPerformers.totalPrice": "Prix Total",
+"TopPerformers.totalSold": "Total Vendu",
+"TopPerformers.latestSoldItems": "Derniers Articles Vendus",
+"TopPerformers.forUser": "pour",
+"TopPerformers.selectPerformer": "Sélectionnez un vendeur",
+"TopPerformers.unknownUser": "N/A",
+"TopPerformers.chartTitle": "Meilleurs Vendeurs par {{orderBy}}"
+
+
+
+
+
+
+
+
+}
