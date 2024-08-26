@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import { cn } from "../../lib/utils";
 
-interface Sparkle {
+interface ISparkle {
   id: string;
   x: string;
   y: string;
@@ -67,10 +67,10 @@ const SparklesText: React.FC<SparklesTextProps> = ({
   sparklesCount = 10,
   ...props
 }) => {
-  const [sparkles, setSparkles] = useState<Sparkle[]>([]);
+  const [sparkles, setSparkles] = useState<ISparkle[]>([]);
 
   useEffect(() => {
-    const generateStar = (): Sparkle => {
+    const generateStar = (): ISparkle => {
       const starX = `${Math.random() * 100}%`;
       const starY = `${Math.random() * 100}%`;
       const color = Math.random() > 0.5 ? colors.first : colors.second;
@@ -125,7 +125,7 @@ const SparklesText: React.FC<SparklesTextProps> = ({
   );
 };
 
-const Sparkle: React.FC<Sparkle> = ({ id, x, y, color, delay, scale }) => {
+const Sparkle: React.FC<ISparkle> = ({ id, x, y, color, delay, scale }) => {
   return (
     <motion.svg
       key={id}
