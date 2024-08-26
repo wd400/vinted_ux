@@ -2,7 +2,7 @@
 
 import Sidebar from './components/Sidebar';
 import axios from 'axios';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { API_URL } from './config';
@@ -20,7 +20,7 @@ const MostExpensiveBrands = () => {
   const [latestItems, setLatestItems] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isSidebarLoading, setIsSidebarLoading] = useState(false);
-  const sidebarRef = useRef<HTMLDivElement>(null);
+ // const sidebarRef = useRef<HTMLDivElement>(null);
 
   const { lang } = useParams<{ lang: string }>();
   const { i18n, t } = useTranslation();

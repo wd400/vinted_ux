@@ -3,7 +3,7 @@
 import Sidebar from './components/Sidebar';
 import axios from 'axios';
 import { BarElement, CategoryScale, Chart as ChartJS, Legend, LinearScale, Title, Tooltip } from 'chart.js';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect,  useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 
 import {API_URL} from './config';
@@ -35,7 +35,7 @@ const HotBrands = () => {
   const [latestItems, setLatestItems] = useState([]);
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [isSidebarLoading, setIsSidebarLoading] = useState(false);
-  const sidebarRef = useRef(null);
+  // const sidebarRef = useRef(null);
 
   async function fetchLatestItemsSold(brand: { brand_title: string }) {
     setIsSidebarLoading(true);

@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Navigate, useParams,useNavigate, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,  useParams, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LandingPage from './lp';
 import ProvidedNavigation from './components/ProvidedNavigation';
@@ -20,15 +20,15 @@ import HotBrands from './HotBrands';
 
 import MostExpensiveBrands from './MostExpensiveBrand';
 
-const Home = () => {
-  const { t } = useTranslation();
-  return <h1 className="text-3xl mt-4">{t('welcome')}</h1>;
-};
+// const Home = () => {
+//   const { t } = useTranslation();
+//   return <h1 className="text-3xl mt-4">{t('welcome')}</h1>;
+// };
 
-const ImageHandler: React.FC = () => {
-  const { imageName } = useParams<{ imageName: string }>();
-  return <img src={`/images/${imageName}`} alt={imageName} />;
-};
+// const ImageHandler: React.FC = () => {
+//   const { imageName } = useParams<{ imageName: string }>();
+//   return <img src={`/images/${imageName}`} alt={imageName} />;
+// };
 
 
 const Verify = () => {
@@ -48,7 +48,7 @@ const Verify = () => {
 
       }
   }
-  , []);
+  , [location.search]);
 
   return <div>Verifying...</div>;
 };

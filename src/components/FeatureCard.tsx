@@ -2,10 +2,9 @@
 
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from 'react';
-import { Navigate, redirect, Route, Routes, useNavigate, useParams } from "react-router-dom";
+import {  useNavigate, useParams } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
 import React from "react";
-import { render } from "react-dom";
 
 interface FeatureCardProps {
   title: string;

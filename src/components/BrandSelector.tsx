@@ -12,7 +12,7 @@ interface BrandSelectorProps {
 const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelect }) => {
   const [query, setQuery] = useState('');
   const [brands, setBrands] = useState<Brand[]>([]);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [selectedBrand, setSelectedBrand] = useState<Brand | null>(null);
   const menuRef = useRef<HTMLUListElement>(null);
 
@@ -29,7 +29,7 @@ const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelect }) => {
   useEffect(() => {
     if (query) {
       const fetchBrands = async () => {
-        setLoading(true);
+    //    setLoading(true);
         try {
           const response = await axios.post(
             `${API_URL}/api/search_brand`, 
@@ -39,7 +39,7 @@ const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelect }) => {
         } catch (error) {
           console.error('Error fetching brands:', error);
         } finally {
-          setLoading(false);
+    //      setLoading(false);
         }
       };
 
