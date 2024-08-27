@@ -31,6 +31,7 @@ const LocaleSwitcher: React.FC = () => {
     if (lang && !['en', 'fr', 'es'].includes(lang)) {
       navigate('/en');
       i18n.changeLanguage('en');
+      lang='en';
     }
 
 const [currentLocale, setCurrentLocale] = React.useState(lang || 'en');
