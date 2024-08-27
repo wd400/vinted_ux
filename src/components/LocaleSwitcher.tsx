@@ -15,6 +15,7 @@ const LocaleSwitcher: React.FC = () => {
     
     const path = window.location.pathname;
     var lang = path.split('/')[1];
+    
 
     // if lang is an empty string, return to the default language
     if (lang === '') {
@@ -29,7 +30,7 @@ const LocaleSwitcher: React.FC = () => {
     // check if the lang is in the list of supported languages
     if (lang && !['en', 'fr', 'es'].includes(lang)) {
       navigate('/en');
-      i18n.changeLanguage(lang);
+      i18n.changeLanguage('en');
     }
 
 const [currentLocale, setCurrentLocale] = React.useState(lang || 'en');
