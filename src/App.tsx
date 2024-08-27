@@ -82,6 +82,8 @@ const App: React.FC = () => {
           <Route path="/:lang/color-trends" element={<ColorTrends />} />
           <Route path="/:lang/expensive-products" element={<ExpensiveProducts />} />
           <Route path="/:lang/about" element={<LanguageWrapper />} />
+          <Route path="*" element={<div>Not Found</div>} />
+
         </Routes>
       </div>
     </Router>
