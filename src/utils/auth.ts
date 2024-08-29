@@ -111,7 +111,9 @@ async function useSession() : Promise<CheckTokenResponse> {
 
 
     if (checked_token.status === 'authenticated' && !checked_token.is_pro) {
-        const response = await fetch('/api/refresh_token');
+        const response = await fetch(
+            API_URL +
+            '/api/refresh_token');
         //check if the response is ok
         if (response.ok) {
             const token = ExtractToken();
