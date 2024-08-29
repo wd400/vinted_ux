@@ -147,7 +147,7 @@ function verifyMagicLink(token: string): boolean {
     const checked_token = checkToken(token);
     if (checked_token.status === 'authenticated') {
         // Store the token in cookies or local storage
-        document.cookie = `session=${token}; path=/`;
+      //  document.cookie = `session=${token}; path=/`;
         //also for subdomains
         document.cookie = `session=${token}; path=/; domain=.${window.location.hostname}`;
         return true;
