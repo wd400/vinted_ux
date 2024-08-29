@@ -2,7 +2,7 @@ import { API_URL } from "../config";
 
 // import jwt from 'jsonwebtoken'; 
 
-function delete_cookie() { document.cookie = 'session=; Path=/;  Domain=vinted.loveresell.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None; Secure' }
+function delete_cookie() { document.cookie = 'session=; Path=/;  Domain=vinted.loveresell.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None; Secure'; }
 
 function clearCookies() {
    // document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
@@ -78,6 +78,8 @@ function checkToken(token:string|undefined) : CheckTokenResponse {
         console.error('Error parsing response', error);
         return { is_pro: false, status: 'unauthenticated' };
     }
+
+    console.log("data",data);
     if (!data) {
         return { is_pro: false, status: 'unauthenticated' };
     }
@@ -89,6 +91,7 @@ function checkToken(token:string|undefined) : CheckTokenResponse {
     if (!data.exp) {
         return { is_pro: false, status: 'unauthenticated' };
     }
+
 
     //check expiration date
     if (data.exp && data.exp < (Date.now()/1000)) {
