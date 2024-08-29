@@ -35,7 +35,11 @@ function ProvidedNavigation2() {
 
   useEffect(() => {
     const avatar_url = localStorage.getItem('avatar_url');
-    if (!avatar_url) {
+    if (
+
+      isLoggedIn &&
+      
+      !avatar_url) {
       fetch(
         API_URL + '/api/vavatar',
         { credentials: 'include' },
