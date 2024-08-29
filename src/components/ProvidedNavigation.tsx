@@ -83,7 +83,6 @@ function ProvidedNavigation2() {
   }, [menuVisible]);
 
   const handleLogout = async () => {
-    localStorage.clear();
     authUtils.signOut();
   };
 

@@ -192,7 +192,7 @@
                   "TopPerformers.forUser": "for",
                   "TopPerformers.selectPerformer": "Select a performer",
                   "TopPerformers.unknownUser": "N/A",
-                  "TopPerformers.chartTitle": "Top Performers by {{orderBy}}"
+                  "TopPerformers.chartTitle": "Top Performers by {{orderBy}}",
 
             
             
@@ -200,7 +200,11 @@
         
       
       
-    
+    "ThanksPage.title": "Bravo, your account is being activated!",
+"ThanksPage.subtitle": "You will receive an activation email shortly.",
+"ThanksPage.whatsapp": "For assistance, contact us directly on WhatsApp:",
+"ThanksPage.cta": "Return to the homepage"
+
     
 
 

@@ -190,7 +190,14 @@ const LandingPage = () => {
                 {t('LandingPage.ctaSubtitle')}
               </p>
               <div className="flex justify-center">
-                <ShimmerButton className="shadow-2xl mt-8 w-80 h-20 hover:scale-110">
+                <ShimmerButton className="shadow-2xl mt-8 w-80 h-20 hover:scale-110"
+
+                  onClick={() => {
+                    //open the billing page in a new tab
+                    window.open('https://buy.stripe.com/00g00t3AJ00Xf0AdQQ');
+                  }}
+                >
+                 
                   <SparklesText
                     className="text-2xl"
                     text={t('LandingPage.ctaButton')}

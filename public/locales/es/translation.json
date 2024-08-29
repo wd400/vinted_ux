@@ -149,5 +149,12 @@
   "TopPerformers.forUser": "para",
   "TopPerformers.selectPerformer": "Selecciona un vendedor",
   "TopPerformers.unknownUser": "N/D",
-  "TopPerformers.chartTitle": "Mejores vendedores por {{orderBy}}"
+  "TopPerformers.chartTitle": "Mejores vendedores por {{orderBy}}",
+
+  "ThanksPage.title": "¡Bravo, su cuenta está en proceso de activación!",
+"ThanksPage.subtitle": "Recibirá un correo electrónico de activación en breve.",
+"ThanksPage.whatsapp": "Para obtener asistencia, contáctenos directamente en WhatsApp:",
+"ThanksPage.cta": "Volver a la página de inicio"
+
+
 }

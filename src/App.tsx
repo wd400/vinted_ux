@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes,  useParams, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,  useParams, useLocation, Navigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LandingPage from './lp';
 import ProvidedNavigation from './components/ProvidedNavigation';
@@ -15,6 +15,8 @@ import SalesTrendDashboard from './SalesTrend';
 import TopPerformers from './TopPerformers';
 import authUtils from './utils/auth';
 import RedirectLang from './components/RedirectLang';
+
+import ThanksPage from './Thanks';
 
 import HotBrands from './HotBrands';
 
@@ -54,6 +56,12 @@ const Verify = () => {
 };
 
 
+const RedirectThanks: React.FC = () => {
+  const lang = localStorage.getItem('locale') || 'en';
+  return <Navigate to={`/${lang}/thanks`} />;
+};
+
+
 
 const App: React.FC = () => {
 
@@ -68,6 +76,8 @@ const App: React.FC = () => {
                 </header>
         <Routes>
           <Route path="/" element={<RedirectLang/>} />
+          <Route path="/thanks" element={<RedirectThanks/>} />
+          <Route path="/:lang/thanks" element={<ThanksPage/>} />
           <Route path="/:lang" element={<LandingPage />} />
           <Route path="/:lang/login" element={<Login />} />
           <Route path="/:lang/me" element={<MePage />} />
