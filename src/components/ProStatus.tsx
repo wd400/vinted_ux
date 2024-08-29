@@ -34,7 +34,12 @@ React.useEffect(() => {
         <div>
           <p className="text-primary text-xl font-semibold mb-4">{t('ProStatus.proUser')}</p>
 
-          <a href="https://billing.stripe.com/p/login/4gw3eV8x5fDMdQ4eUU" className="inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primaryDark transition">
+          <a 
+
+        target="_blank"
+        rel="noreferrer"
+
+          href="https://billing.stripe.com/p/login/4gw3eV8x5fDMdQ4eUU" className="inline-block px-4 py-2 bg-primary text-white rounded hover:bg-primaryDark transition">
             {t('ProStatus.manageAccount')}
           </a>
         </div>
