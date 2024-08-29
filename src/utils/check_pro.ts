@@ -1,3 +1,5 @@
+import { API_URL } from "../config";
+
 async function CheckPro () {
     const pro_until = localStorage.getItem('pro_until');
 
@@ -7,7 +9,9 @@ async function CheckPro () {
         return true;
     }
 
-    const response = await fetch('/api/check_pro', {
+    const response = await fetch(
+      API_URL +
+      '/api/check_pro', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
