@@ -1,2 +1,2 @@
 // src/config.ts
-export const API_URL = "http://api.vinted.loveresell.com:50009";
+export const API_URL = "https://api.vinted.loveresell.com:50009";
