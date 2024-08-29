@@ -114,6 +114,7 @@ async function useSession() : Promise<CheckTokenResponse> {
         const response = await fetch(
             API_URL +
             '/api/refresh_token',
+            // include credentials
             { credentials: 'include' },
         );
         //check if the response is ok
