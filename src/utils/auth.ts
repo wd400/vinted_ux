@@ -2,7 +2,7 @@ import { API_URL } from "../config";
 
 // import jwt from 'jsonwebtoken'; 
 
-function delete_cookie() { document.cookie = 'session=; Path=/;  Domain=vinted.loveresell.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None; Secure'; }
+function delete_cookie() { document.cookie = 'session=; Path=/;  Domain=.vinted.loveresell.com; Expires=Thu, 01 Jan 1970 00:00:01 GMT; SameSite=None; Secure'; }
 
 function clearCookies() {
    // document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/"); });
