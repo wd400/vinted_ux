@@ -28,6 +28,7 @@ function ProvidedNavigation2() {
 
   useEffect(() => {
     authUtils.useSession().then((session) => {
+      console.log("session",session); 
       setStatus(session.status);
       setIsPro(session.is_pro);
     });
