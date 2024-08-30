@@ -217,7 +217,11 @@ const LandingPage = () => {
       <footer className="bg-slate-900 text-gray-400 py-10">
         <div className="container mx-auto px-4 text-center">
           <a href="/faq">{t('LandingPage.faq')}</a>
-          <a href="mailto:contact@tool.com" className="ml-4">
+          <a href="https://wa.me/message/PRUIVUOAEI2ZG1" className="ml-4"
+          
+          target='_blank'
+          rel='noreferrer'
+          >
             {t('LandingPage.contact')}
           </a>
         </div>
