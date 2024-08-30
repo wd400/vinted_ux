@@ -64,21 +64,22 @@ React.useEffect(() => {
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{t('PriceEstimation.title')}</h1>
 
-      <div className="flex">
-      <BrandSelector onSelect={handleBrandSelect} />
-      </div>
+  
 
-<div className="flex justify-center">
+<div className="justify-center">
+    
+<BrandSelector onSelect={handleBrandSelect} />
+
       <PriceDistributionChart
         catalogId={selectedCatalogId}
         brandId={selectedBrand ? selectedBrand._id : null}
         onBarClick={handleBarClick}
       />
+
+<CatalogSelector onCatalogSelect={handleCatalogSelect} />
 </div>
 
-      <div className="flex">
-        <CatalogSelector onCatalogSelect={handleCatalogSelect} />
-      </div>
+      
 
       <Sidebar
         isSidebarLoading={SidebarLoading}
