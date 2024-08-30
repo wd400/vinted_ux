@@ -39,7 +39,10 @@ React.useEffect(() => {
       try {
         const response = await axios.post(
           API_URL + '/api/top_performers',
-          { days, orderBy }
+          { days, orderBy },
+          {
+            withCredentials: true,
+          }
         );
         setPerformersData(response.data);
       } catch (error) {
@@ -72,7 +75,10 @@ React.useEffect(() => {
     try {
       const response = await axios.post(
         API_URL + '/api/latest_items',
-        { userId: performer._id.user_id }
+        { userId: performer._id.user_id },
+        {
+          withCredentials: true,
+        }
       );
       setLatestItems(response.data);
     } catch (error) {

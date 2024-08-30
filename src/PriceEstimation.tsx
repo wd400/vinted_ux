@@ -48,6 +48,9 @@ React.useEffect(() => {
         priceMin: minPrice,
         priceMax: maxPrice,
         days: 180,
+      },
+      {
+        withCredentials: true,
       })
       .then((response) => {
         setSidebarData(response.data);

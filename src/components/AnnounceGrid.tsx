@@ -24,7 +24,12 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
             '/api/top_announces', {
             catalogId,
             brandId,
-          });
+          },
+        
+          {
+            withCredentials: true,
+          }
+        );
           setAnnounces(response.data);
         } catch (error) {
           console.error('Error fetching announces:', error);

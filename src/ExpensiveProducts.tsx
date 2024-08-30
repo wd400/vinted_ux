@@ -28,7 +28,11 @@ React.useEffect(() => {
     axios
       .post(API_URL + '/api/expensive_products', {
         period: timeFrame,
-      })
+      },
+      {
+        withCredentials: true,
+      }
+    )
       .then((response) => {
         setProducts(response.data);
       })

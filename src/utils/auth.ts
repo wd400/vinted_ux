@@ -31,6 +31,8 @@ async function signIn(email: string,locale:string): Promise<boolean> {
         headers: {
             'Content-Type': 'application/json',
         },
+        //include credentials
+        credentials: 'include',
         body: JSON.stringify({ email,locale }),
     })
         .then((response) => {

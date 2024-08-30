@@ -60,7 +60,10 @@ const HotBrands = () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          API_URL + '/api/brand_sales_trend');
+          API_URL + '/api/brand_sales_trend',
+          {
+            withCredentials: true,
+          });
         setBrandSalesData(response.data);
       } catch (error) {
         console.error('Error fetching brand sales trend:', error);

@@ -36,7 +36,10 @@ const MostExpensiveBrands = () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          API_URL + '/api/most_expensive_brands'
+          API_URL + '/api/most_expensive_brands',
+          {
+            withCredentials: true,
+          }
         );
         setMostExpensiveBrands(response.data);
       } catch (error) {

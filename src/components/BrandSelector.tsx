@@ -33,7 +33,10 @@ const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelect }) => {
         try {
           const response = await axios.post(
             `${API_URL}/api/search_brand`, 
-            { query }
+            { query },
+            {
+              withCredentials: true,
+            }
           );
           setBrands(response.data);
         } catch (error) {

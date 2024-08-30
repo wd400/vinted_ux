@@ -43,7 +43,10 @@ React.useEffect(() => {
       try {
         const response = await axios.post(
           API_URL + '/api/sales_trend',
-          { days, groupBy, orderBy }
+          { days, groupBy, orderBy },
+          {
+            withCredentials: true,
+          }
         );
         setSalesData(response.data);
       } catch (error) {
@@ -106,6 +109,9 @@ React.useEffect(() => {
           days,
           brand: tile._id.brand_title,
           category: tile._id.catalog_id,
+        },
+        {
+          withCredentials: true,
         }
       );
       setLatestProducts(response.data);

@@ -26,7 +26,9 @@ const PriceDistributionChart: React.FC<PriceDistributionChartProps> = ({ brandId
     const fetchPriceDistribution = async () => {
       setIsLoading(true);
       try {
-        const response = await axios.post(API_URL + '/api/price_distribution', { brandId, catalogId });
+        const response = await axios.post(API_URL + '/api/price_distribution', { brandId, catalogId },      {
+          withCredentials: true,
+        });
         const data = response.data;
         setData(data);
 

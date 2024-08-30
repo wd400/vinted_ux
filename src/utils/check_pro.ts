@@ -16,6 +16,7 @@ async function CheckPro () {
         headers: {
             'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({
             token: localStorage.getItem('token'),
         }),

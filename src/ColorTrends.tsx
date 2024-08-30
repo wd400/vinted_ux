@@ -87,7 +87,9 @@ React.useEffect(() => {
       try {
         const [colorsResponse, dataResponse] = await Promise.all([
           fetchColors(lang||'en'),
-          axios.post(API_URL + '/api/popular_colors', { aggregateBy: aggregationType }),
+          axios.post(API_URL + '/api/popular_colors', { aggregateBy: aggregationType },
+            { withCredentials: true }
+          ),
         ]);
         //order data by sold_week (integer)
         dataResponse.data.sort((a: DataItem, b: DataItem) => a.sold_week - b.sold_week);
