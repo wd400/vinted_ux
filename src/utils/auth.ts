@@ -144,6 +144,48 @@ async function useSession() : Promise<CheckTokenResponse> {
     return checked_token;
 }
 
+function ExtractEmail() {
+    const cookie = document.cookie;
+    const session = cookie.split('; ').find(row => row.startsWith('session='));
+    //decode jwt token
+    const token = session?.split('=')[1];
+    if (!token) {
+        return '';
+    }
+    let data;
+
+
+    try {
+        //base64 decode the token on client side
+        //start by splitting the token
+
+        const token_parts = token.split('.');
+        //get the payload
+        const payload = token_parts[1];
+        //decode the payload
+        const decodedPayload = atob(payload);
+        //parse the payload
+        data = JSON.parse(decodedPayload);
+    } catch (error) {
+        console.error('Error parsing response', error);
+        return '';
+    }
+
+    if (!data) {
+        return '';
+    }
+
+    if (typeof data === 'string') {
+        return '';
+    }
+
+    if (!data.email) {
+        return '';
+    }
+
+    return data.email as string;
+}
+
 function verifyMagicLink(token: string): boolean {
 
     const checked_token = checkToken(token);
@@ -157,5 +199,5 @@ function verifyMagicLink(token: string): boolean {
     return false;
 }
 
-const authUtils = { signOut, signIn, useSession, checkToken, ExtractToken, verifyMagicLink };
+const authUtils = { signOut, signIn, useSession, checkToken, ExtractToken, verifyMagicLink ,ExtractEmail};
 export default authUtils;

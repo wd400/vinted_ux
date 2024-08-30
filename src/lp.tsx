@@ -194,8 +194,13 @@ const LandingPage = () => {
 
                   onClick={() => {
                     //open the billing page in a new tab
-                    window.open('https://buy.stripe.com/00g00t3AJ00Xf0AdQQ');
-                  }}
+                    const mail= authUtils.ExtractEmail;
+
+                      window.open(`https://buy.stripe.com/00g00t3AJ00Xf0AdQQ?prefilled_email=${mail}&prefilled_promo_code=LAUNCH`);
+
+                  }
+                  }
+
                 >
                  
                   <SparklesText
