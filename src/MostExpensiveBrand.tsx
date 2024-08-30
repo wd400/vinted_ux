@@ -63,7 +63,11 @@ const MostExpensiveBrands = () => {
       try {
         const response = await axios.post(API_URL + `/api/latest_items`, {
           brand: brand.brand,
-        });
+        },
+          {
+            withCredentials: true,
+          }
+      );
         setLatestItems(response.data);
       } catch (error) {
         console.error('Error fetching latest items:', error);

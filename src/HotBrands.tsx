@@ -40,7 +40,11 @@ const HotBrands = () => {
   async function fetchLatestItemsSold(brand: { brand_title: string }) {
     setIsSidebarLoading(true);
     try {
-      const response = await axios.post(API_URL + '/api/latest_items', { brand: brand.brand_title });
+      const response = await axios.post(API_URL + '/api/latest_items', { brand: brand.brand_title },
+        {
+          withCredentials: true,
+        }
+      );
       setLatestItems(response.data);
     } catch (error) {
       console.error('Error fetching latest items sold:', error);
