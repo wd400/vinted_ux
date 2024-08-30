@@ -181,13 +181,16 @@ function ProvidedNavigation2() {
           display: block;
         }
         .glow-effect {
-          box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.8);
+    
+     
+          background: radial-gradient(circle, rgba(255, 215, 0, 1) 0%, rgba(255, 215, 0, 1) 100%);
         }
       `}</style>
     </div>
   );
 }
 
+// //     box-shadow: 0 0 10px 2px rgba(255, 215, 0, 0.8);
 function ProvidedNavigation() {
   const location = window.location.pathname;
 
