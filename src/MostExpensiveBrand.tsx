@@ -102,7 +102,9 @@ const MostExpensiveBrands = () => {
                   className="cursor-pointer transform transition duration-300 hover:bg-gray-100 hover:scale-105"
                 >
                   <td className="border px-4 py-2">{brand.brand}</td>
-                  <td className="border px-4 py-2">${brand.averagePrice.toFixed(2)}</td>
+                  <td className="border px-4 py-2">
+                    
+                    {brand.averagePrice.toFixed(2)}</td>
                   <td className="border px-4 py-2">{brand.quantity}</td>
                 </tr>
               ))}
