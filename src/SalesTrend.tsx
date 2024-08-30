@@ -61,7 +61,7 @@ React.useEffect(() => {
     const fetchCategories = async (lang:string) => {
       try {
         //https://www.vinted.com/api/v2/catalogs
-        const response = await axios.get(`/${lang}//catalogs.json`);
+        const response = await axios.get(`/${lang}/catalogs.json`);
         const data: Record<number, string> = {};
         const getCategories = (catalogs: Catalog[], path: string[] = []) => {
           catalogs.forEach(catalog => {

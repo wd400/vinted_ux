@@ -64,7 +64,7 @@ const CatalogSelector: React.FC<{
   useEffect(() => {
     const fetchCatalogs = async (lang:string) => {
       try {
-        const response = await axios.get(`/${lang}//catalogs.json`);
+        const response = await axios.get(`/${lang}/catalogs.json`);
         setCatalogs(response.data.catalogs);
       } catch (error) {
         console.error('Error fetching catalogs:', error);
