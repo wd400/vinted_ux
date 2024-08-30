@@ -61,7 +61,7 @@ const LandingPage = () => {
           </motion.p>
         </div>
 
-        <Meteors number={6} />
+        <Meteors number={10} />
       </header>
 
       <section className="py-20 bg-white">
