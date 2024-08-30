@@ -210,6 +210,7 @@ const LandingPage = () => {
                 </ShimmerButton>
               </div>
               <div className="text-center mt-4">
+                <p><b>-70%</b> {t('LandingPage.discount')}: <b>LAUNCH</b> !</p>
                 <p>{t('LandingPage.noCommitmentSubscription')}</p>
               </div>
             </>

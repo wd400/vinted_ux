@@ -41,13 +41,9 @@ const Verify = () => {
       const token = params.get('token');
       if (token) {
        const checked= authUtils.verifyMagicLink(token)
-
        if(checked){
         window.location.href = '/';
-
        }
-       
-
       }
   }
   , [location.search]);
