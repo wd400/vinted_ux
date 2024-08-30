@@ -40,6 +40,7 @@ React.useEffect(() => {
 
   const handleBarClick = (minPrice: number, maxPrice: number) => {
     setSidebarLoading(true);
+    setSidebarOpen(true);
     axios
       .post(API_URL + '/api/latest_items', {
         brandId: selectedBrand ? selectedBrand._id : undefined,
@@ -61,16 +62,15 @@ React.useEffect(() => {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container justify-center mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{t('PriceEstimation.title')}</h1>
 
   
 
-<div className="justify-center 
-flex flex-row
-">
     
+    <div className="flex flex-row justify-between">
 <BrandSelector onSelect={handleBrandSelect} />
+</div>
 
       <PriceDistributionChart
         catalogId={selectedCatalogId}
@@ -78,10 +78,13 @@ flex flex-row
         onBarClick={handleBarClick}
       />
 
+<div className="flex flex-row justify-between">
+
+
 <CatalogSelector onCatalogSelect={handleCatalogSelect} />
-</div>
 
       
+    </div>
 
       <Sidebar
         isSidebarLoading={SidebarLoading}

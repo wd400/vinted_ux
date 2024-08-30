@@ -77,7 +77,7 @@ const PriceDistributionChart: React.FC<PriceDistributionChartProps> = ({ brandId
   };
 
   return (
-    <div style={{ height: '300px' }}>
+    <div style={{ height: '300px' }} className="flex items-center justify-center">
       {histogramData && histogramData.datasets[0].data.length > 0 && (
         <Bar data={histogramData} options={options} />
       )}
