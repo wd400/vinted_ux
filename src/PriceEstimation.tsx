@@ -66,7 +66,9 @@ React.useEffect(() => {
 
   
 
-<div className="justify-center">
+<div className="justify-center 
+flex flex-row
+">
     
 <BrandSelector onSelect={handleBrandSelect} />
 
