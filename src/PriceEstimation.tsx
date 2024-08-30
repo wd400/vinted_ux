@@ -64,13 +64,17 @@ React.useEffect(() => {
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{t('PriceEstimation.title')}</h1>
 
+      <div className="flex">
       <BrandSelector onSelect={handleBrandSelect} />
+      </div>
 
+<div className="flex justify-center">
       <PriceDistributionChart
         catalogId={selectedCatalogId}
         brandId={selectedBrand ? selectedBrand._id : null}
         onBarClick={handleBarClick}
       />
+</div>
 
       <div className="flex">
         <CatalogSelector onCatalogSelect={handleCatalogSelect} />
