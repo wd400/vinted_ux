@@ -194,9 +194,9 @@ const LandingPage = () => {
 
                   onClick={() => {
                     //open the billing page in a new tab
-                    const mail= authUtils.ExtractEmail;
+                    const mail= authUtils.ExtractEmail();
 
-                      window.open(`https://buy.stripe.com/00g00t3AJ00Xf0AdQQ?prefilled_email=${mail}&prefilled_promo_code=LAUNCH`);
+                      window.open(`https://buy.stripe.com/dR6dRj2wF5lh7y8eUV?prefilled_email=${mail}&prefilled_promo_code=LAUNCH`);
 
                   }
                   }
