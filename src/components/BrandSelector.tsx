@@ -74,7 +74,7 @@ const BrandSelector: React.FC<BrandSelectorProps> = ({ onSelect }) => {
 
   return (
     <div className="p-4 relative">
-      <h1 className="text-2xl mb-4">{t('BrandSelector.select_brand')}</h1> {/* Use translation key */}
+      <h1 className="text-2xl mb-4">{t('BrandSelector.select_brand')}</h1>
       <div className="flex items-center mb-4">
         <input
           type="text"

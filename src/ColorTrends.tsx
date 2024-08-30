@@ -89,6 +89,8 @@ React.useEffect(() => {
           fetchColors(lang||'en'),
           axios.post(API_URL + '/api/popular_colors', { aggregateBy: aggregationType }),
         ]);
+        //order data by sold_week (integer)
+        dataResponse.data.sort((a: DataItem, b: DataItem) => a.sold_week - b.sold_week);
         setData(dataResponse.data);
         setColors(colorsResponse);
       } catch (error) {
