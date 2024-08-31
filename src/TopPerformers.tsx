@@ -86,7 +86,11 @@ const handleCatalogSelect = (catalogId: number | null) => {
     try {
       const response = await axios.post(
         API_URL + '/api/latest_items',
-        { userId: performer._id.user_id },
+        { userId: performer._id.user_id,
+          category: selectedCatalogId,
+          days: days
+
+         },
         {
           withCredentials: true,
         }
