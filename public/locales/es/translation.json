@@ -82,7 +82,7 @@
   "ExpensiveProducts.yearly": "Anual",
 
   "ColorTrends.title": "Progresión de colores populares",
-  "ColorTrends.dashboardTitle": "Panel de colores populares",
+  "ColorTrends.dashboardTitle": "Colores populares",
   "ColorTrends.aggregationType": "Tipo de agregación",
   "ColorTrends.week": "Semana",
   "ColorTrends.month": "Mes",
@@ -111,7 +111,7 @@
   "PriceEstimation.title": "Estimación de precios",
   "PriceEstimation.sidebarTitle": "Últimos artículos vendidos",
 
-  "SalesTrendDashboard.title": "Panel de ventas",
+  "SalesTrendDashboard.title": "Productos más vendidos",
   "SalesTrendDashboard.last_3_days": "Últimos 3 días",
   "SalesTrendDashboard.last_30_days": "Últimos 30 días",
   "SalesTrendDashboard.group_by_product": "Agrupar por producto",
@@ -141,7 +141,7 @@
 
   "TopAnnounces.title": "Top anuncios",
 
-  "TopPerformers.title": "Panel de mejores vendedores",
+  "TopPerformers.title": "Mejores vendedores",
   "TopPerformers.last3Days": "Últimos 3 días",
   "TopPerformers.last30Days": "Últimos 30 días",
   "TopPerformers.orderByTotalPrice": "Ordenar por precio total",

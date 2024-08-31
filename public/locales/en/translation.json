@@ -5,7 +5,7 @@
   "LandingPage.title": "Vinted Analytics",
   "LandingPage.newBadge": "New",
   "LandingPage.subtitle": "Boost Your Vinted Like a Pro",
-  "LandingPage.featuresSectionTitle": "Answer All Your Questions with unprecedented Data",
+  "LandingPage.featuresSectionTitle": "Finally answer All Your Questions with exclusive Data",
   "LandingPage.topSellingProductsTitle": "Top Selling Products",
   "LandingPage.topSellingProductsDesc": "Discover the current top-selling categories at the highest prices",
   "LandingPage.hotBrandNichesTitle": "New Brand Niches",
@@ -109,7 +109,7 @@
 
 
   "ColorTrends.title": "Popular Colors Progression",
-  "ColorTrends.dashboardTitle": "Popular Colors Dashboard",
+  "ColorTrends.dashboardTitle": "Popular Colors",
   "ColorTrends.aggregationType": "Aggregation Type",
   "ColorTrends.week": "Week",
   "ColorTrends.month": "Month",
@@ -146,7 +146,7 @@
         
 
           
-            "SalesTrendDashboard.title": "Sales Dashboard",
+            "SalesTrendDashboard.title": "Top selling products",
             "SalesTrendDashboard.last_3_days": "Last 3 days",
             "SalesTrendDashboard.last_30_days": "Last 30 days",
             "SalesTrendDashboard.group_by_product": "Group by Product",
@@ -182,7 +182,7 @@
 
 
 
-                  "TopPerformers.title": "Top Performers Dashboard",
+                  "TopPerformers.title": "Top Sellers",
                   "TopPerformers.last3Days": "Last 3 days",
                   "TopPerformers.last30Days": "Last 30 days",
                   "TopPerformers.orderByTotalPrice": "Order by Total Price",

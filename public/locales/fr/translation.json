@@ -4,7 +4,7 @@
 "LandingPage.title": "Vinted Analytics",
 "LandingPage.newBadge": "Nouveau",
 "LandingPage.subtitle": "Boostez votre Vinted comme un Pro",
-"LandingPage.featuresSectionTitle": "Répondez à toutes vos questions par la data",
+"LandingPage.featuresSectionTitle": "Répondez enfin à toutes vos questions par la data",
 "LandingPage.topSellingProductsTitle": "Produits les plus Vendus",
 "LandingPage.topSellingProductsDesc": "Découvrez les catégories actuelles qui se vendent le mieux, au prix le plus élevé",
 "LandingPage.hotBrandNichesTitle": "Nouvelles Niches de Marques",
@@ -83,7 +83,7 @@
 "ExpensiveProducts.yearly": "Annuel",
 
 "ColorTrends.title": "Progression des Couleurs Populaires",
-"ColorTrends.dashboardTitle": "Tableau de Bord des Couleurs Populaires",
+"ColorTrends.dashboardTitle": "Couleurs Populaires",
 "ColorTrends.aggregationType": "Type d'Agrégation",
 "ColorTrends.week": "Semaine",
 "ColorTrends.month": "Mois",
@@ -119,7 +119,7 @@
 
 
 
-"SalesTrendDashboard.title": "Tableau de Bord des Ventes",
+"SalesTrendDashboard.title": "Produits les plus vendus",
 "SalesTrendDashboard.last_3_days": "Derniers 3 jours",
 "SalesTrendDashboard.last_30_days": "Derniers 30 jours",
 "SalesTrendDashboard.group_by_product": "Grouper par Produit",
@@ -155,7 +155,7 @@
 
 
 
-"TopPerformers.title": "Tableau de Bord des Meilleurs Vendeurs",
+"TopPerformers.title": "Top Vendeurs",
 "TopPerformers.last3Days": "Derniers 3 jours",
 "TopPerformers.last30Days": "Derniers 30 jours",
 "TopPerformers.orderByTotalPrice": "Trier par Prix Total",
