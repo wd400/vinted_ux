@@ -10,6 +10,7 @@ import { API_URL } from './config';
 import { t } from 'i18next';
 import React from 'react';
 import { useParams } from 'react-router-dom';
+import CatalogSelector from './components/CategorySelector';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
@@ -23,6 +24,8 @@ const TopPerformers = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSidebarLoading, setIsSidebarLoading] = useState(false);
   const sidebarRef = useRef<HTMLDivElement>(null);
+  const [selectedCatalogId, setSelectedCatalogId] = useState<number | null>(null);
+
 
   const { lang } = useParams<{ lang: string }>();
 const { i18n } = useTranslation();
@@ -32,6 +35,12 @@ React.useEffect(() => {
   }
 }, [lang, i18n]);
 
+
+const handleCatalogSelect = (catalogId: number | null) => {
+  setSelectedCatalogId(catalogId);
+  // Do something with the selected catalog ID
+};
+
   useEffect(() => {
 
     const fetchTopPerformers = async () => {
@@ -39,7 +48,9 @@ React.useEffect(() => {
       try {
         const response = await axios.post(
           API_URL + '/api/top_performers',
-          { days, orderBy },
+          { days, orderBy,
+            catalogId: selectedCatalogId
+           },
           {
             withCredentials: true,
           }
@@ -53,7 +64,7 @@ React.useEffect(() => {
     };
 
     fetchTopPerformers();
-  }, [days, orderBy]);
+  }, [days, orderBy,selectedCatalogId]);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -161,7 +172,12 @@ React.useEffect(() => {
             <option value="sum_price">{t('TopPerformers.orderByTotalPrice')}</option>
             <option value="total_sold">{t('TopPerformers.orderByTotalSold')}</option>
           </select>
+
+          
         </div>
+
+        <CatalogSelector onCatalogSelect={handleCatalogSelect} />
+
 
         {isLoading ? (
           <div className="flex justify-center items-center h-64">
@@ -198,7 +214,13 @@ React.useEffect(() => {
             </div>
           </>
         )}
+
+
+     
       </div>
+
+
+
 
       {/* Sidebar */}
       <Sidebar
