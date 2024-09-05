@@ -191,6 +191,7 @@ const LandingPage = () => {
               </p>
               <div className="flex justify-center">
                 <ShimmerButton className="shadow-2xl mt-8 w-80 h-20 hover:scale-110"
+                id="ctaButton"
 
                   onClick={() => {
                     //open the billing page in a new tab
