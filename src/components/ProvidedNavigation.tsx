@@ -12,7 +12,7 @@ function ProvidedNavigation2() {
   const { i18n } = useTranslation(); // Initialize the translation hook
   const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
   const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
-  const [menuVisible, setMenuVisible] = useState(false);
+  const [menuVisible, setMenuVisible] = useState<boolean | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<string | null>(null);
   const [isPro, setIsPro] = useState<boolean | null>(null);
@@ -119,7 +119,7 @@ function ProvidedNavigation2() {
                 
                 onClick={() => setMenuVisible(!menuVisible)}
               />
-              {menuVisible && (
+              {menuVisible===true && (
                 <div
                   ref={menuRef}
                   className="absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg z-40 top-full 
