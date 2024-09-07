@@ -111,7 +111,12 @@ function ProvidedNavigation2() {
               <img
                 src={avatarUrl || '/images/vempty.svg'}
                 alt="avatar"
-                className={`w-8 h-8 rounded-full cursor-pointer  ${isPro ? 'glow-effect' : ''}`}
+                className={`w-8 h-8 rounded-full cursor-pointer  ${isPro ? 'glow-effect' : ''}
+                
+                object-cover object-center`}
+
+
+                
                 onClick={() => setMenuVisible(!menuVisible)}
               />
               {menuVisible && (
