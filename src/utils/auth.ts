@@ -196,6 +196,9 @@ function verifyMagicLink(token: string): boolean {
         //also for subdomains
         document.cookie = `session=${token}; path=/; domain=.${window.location.hostname}`;
 
+        //clear local storage avatar_url
+        localStorage.removeItem('avatar_url');
+
 
 
 
