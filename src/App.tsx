@@ -21,6 +21,7 @@ import ThanksPage from './Thanks';
 import HotBrands from './HotBrands';
 
 import MostExpensiveBrands from './MostExpensiveBrand';
+import { API_URL } from './config';
 
 // const Home = () => {
 //   const { t } = useTranslation();
@@ -42,7 +43,22 @@ const Verify = () => {
       if (token) {
        const checked= authUtils.verifyMagicLink(token)
        if(checked){
+
+
+        fetch(API_URL + '/api/log', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+               // 'Cookie': `session=${token}`,
+            },
+            
+            //include credentials
+            credentials: 'include',
+            body: JSON.stringify({ action: 'magic' }),
+        }).then((response) => {
+
         window.location.href = '/';
+        });
        }
       }
   }
