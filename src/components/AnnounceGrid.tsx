@@ -17,7 +17,7 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
     const fetchAnnounces = async () => {
       console.log('catalogId:', catalogId);
       console.log('brandId:', brandId);
-   //   if (catalogId && brandId) {
+      if (catalogId !== null || brandId !== null) {
         try {
           const response = await axios.post(
             API_URL +
@@ -34,9 +34,9 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
         } catch (error) {
           console.error('Error fetching announces:', error);
         }
-      // } else {
-      //   setAnnounces(null);
-      // }
+      } else {
+        setAnnounces(null);
+      }
     };
     fetchAnnounces();
   }, [catalogId, brandId]);

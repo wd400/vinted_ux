@@ -202,7 +202,7 @@ function verifyMagicLink(token: string): boolean {
             },
             //include credentials
             credentials: 'include',
-            body: JSON.stringify({ action: 'login' }),
+            body: JSON.stringify({ action: 'magic' }),
         });
 
 
