@@ -1,3 +1,4 @@
+import axios from "axios";
 import { API_URL } from "../config";
 
 // import jwt from 'jsonwebtoken'; 
@@ -195,17 +196,22 @@ function verifyMagicLink(token: string): boolean {
         //also for subdomains
         document.cookie = `session=${token}; path=/; domain=.${window.location.hostname}`;
 
-        fetch(API_URL + '/api/log', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Cookie': `session=${token}`,
-            },
+        // fetch(API_URL + '/api/log', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //        // 'Cookie': `session=${token}`,
+        //     },
             
-            //include credentials
-            credentials: 'include',
-            body: JSON.stringify({ action: 'magic' }),
-        });
+        //     //include credentials
+        //     credentials: 'include',
+        //     body: JSON.stringify({ action: 'magic' }),
+        // });
+
+        // same but with axios
+        axios.post(API_URL + '/api/log', { action: 'magic' }, 
+            { withCredentials: true },
+        );
 
 
         return true;
