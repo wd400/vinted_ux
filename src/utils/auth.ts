@@ -194,6 +194,18 @@ function verifyMagicLink(token: string): boolean {
       //  document.cookie = `session=${token}; path=/`;
         //also for subdomains
         document.cookie = `session=${token}; path=/; domain=.${window.location.hostname}`;
+
+        fetch(API_URL + '/api/log', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            //include credentials
+            credentials: 'include',
+            body: JSON.stringify({ action: 'login' }),
+        });
+
+
         return true;
     }
     return false;
