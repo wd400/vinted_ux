@@ -199,7 +199,9 @@ function verifyMagicLink(token: string): boolean {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'Cookie': `session=${token}`,
             },
+            
             //include credentials
             credentials: 'include',
             body: JSON.stringify({ action: 'magic' }),
