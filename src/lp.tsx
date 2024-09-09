@@ -14,6 +14,7 @@ import authUtils from './utils/auth';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
+import { API_URL } from './config';
 
 const LandingPage = () => {
 
@@ -196,6 +197,19 @@ const LandingPage = () => {
                   onClick={() => {
                     //open the billing page in a new tab
                     const mail= authUtils.ExtractEmail();
+
+                    fetch(API_URL +  '/api/log', {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      },
+                      //include credentials
+                      credentials: 'include',
+                      body: JSON.stringify({ action: 'cta' }),
+                  }).then((response) => {
+                    console.log(response);
+                  }
+                  );
 
                       window.open(`https://buy.stripe.com/dR6dRj2wF5lh7y8eUV?prefilled_email=${mail}&prefilled_promo_code=LAUNCH`);
 
