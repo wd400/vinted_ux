@@ -145,6 +145,9 @@ const LandingPage = () => {
         </div>
       </section>
 
+      { 
+      isPro !== true && (
+
       <section className="py-20 bg-gray-100">
         <div className="container mx-auto px-4 text-center">
           {/* <h2 className="text-3xl font-semibold text-center mb-8 md:text-4xl">
@@ -172,6 +175,7 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      )}
 
       <section className="relative py-20 bg-primary text-white">
         <div className="container mx-auto px-4 text-center">
