@@ -97,10 +97,10 @@ function ProvidedNavigation2() {
         <div className="flex items-center space-x-4">
           <Link className="m-0 p-0" to={`/${i18n.language}`}>
             <div className="flex items-center">
-              <img src="/v.svg" alt="logo" className="hidden sm:block m-0 p-0" />
-              <img src="/v_small.svg" alt="logo" className="block sm:hidden m-0 p-0" />
+              {/* <img src="/v.svg" alt="logo" className="hidden sm:block m-0 p-0" />
+              <img src="/v_small.svg" alt="logo" className="block sm:hidden m-0 p-0" /> */}
               <div className="text-2xl font-semibold leading-tight tracking-tight text-primary ml-2">
-               Analytics
+               LoveResell
               </div>
             </div>
           </Link>

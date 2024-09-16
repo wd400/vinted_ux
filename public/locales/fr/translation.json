@@ -1,7 +1,7 @@
 { "welcome": "Bienvenue sur React avec i18n et Tailwind CSS!",
 
 
-"LandingPage.title": "Vinted Analytics",
+"LandingPage.title": "LoveResell",
 "LandingPage.newBadge": "Nouveau",
 "LandingPage.subtitle": "Boostez votre Vinted comme un Pro",
 "LandingPage.featuresSectionTitle": "Répondez enfin à toutes vos questions par la data",
@@ -33,9 +33,48 @@
 "LandingPage.discount": "à vie exclusivement avec le code",
 
 
-
 "LandingPage.userReview": "Vinted Analytics a transformé ma façon de vendre. Je recommande vivement !",
 "LandingPage.userReviewPro": "Vendeur Pro Vinted",
+
+
+
+
+
+"LandingPage2.title": "Vinted Analytics",
+"LandingPage2.newBadge": "Nouveau",
+"LandingPage2.subtitle": "Boostez votre Vinted comme un Pro",
+"LandingPage2.featuresSectionTitle": "Répondez enfin à toutes vos questions par la data",
+"LandingPage2.topSellingProductsTitle": "Produits les plus Vendus",
+"LandingPage2.topSellingProductsDesc": "Découvrez les catégories actuelles qui se vendent le mieux, au prix le plus élevé",
+"LandingPage2.hotBrandNichesTitle": "Nouvelles Niches de Marques",
+"LandingPage2.hotBrandNichesDesc": "Analysez les marques qui gagnent récemment en popularité",
+"LandingPage2.mostExpensiveBrandsTitle": "Marques les Plus Chères",
+"LandingPage2.mostExpensiveBrandsDesc": "Révélez les dernières marques qui se vendent le plus cher",
+"LandingPage2.optimizeProfileTitle": "Optimisez Votre Profil",
+"LandingPage2.announcesThatSellTitle": "Annonces qui Vendent",
+"LandingPage2.announcesThatSellDesc": "Les photos et descriptions qui permettent des ventes plus rapides, à des prix plus élevés pour tous vos articles",
+"LandingPage2.topPerformersTitle": "Meilleurs Vendeurs",
+"LandingPage2.topPerformersDesc": "Découvrez les meilleurs vendeurs Vinted pour apprendre de leurs stratégies, leurs top produits",
+"LandingPage2.priceEstimationTitle": "Estimation des Prix",
+"LandingPage2.priceEstimationDesc": "Estimez le meilleur prix de vente de vos articles via l'historique des ventes globales",
+"LandingPage2.moreFeaturesTitle": "Et Plus...",
+"LandingPage2.trendingColorsTitle": "Couleurs Tendance",
+"LandingPage2.trendingColorsDesc": "Observez les tendances des couleurs les plus populaires sur Vinted",
+"LandingPage2.mostExpensiveProductsTitle": "Produits les Plus Chers",
+"LandingPage2.mostExpensiveProductsDesc": "Découvrez les derniers articles les plus chers vendus sur Vinted",
+"LandingPage2.moreFeaturesComingSoon": "Plus de fonctionnalités bientôt disponibles !",
+"LandingPage2.ctaTitle": "Commencez Dès Aujourd'hui",
+"LandingPage2.ctaSubtitle": "Lancement public limité aux 100 premiers utilisateurs. Inscrivez-vous maintenant pour sécuriser votre place !",
+"LandingPage2.ctaButton": "Déverrouiller Tout",
+"LandingPage2.noCommitmentSubscription": "abonnement sans engagement",
+"LandingPage2.faq": "FAQ",
+"LandingPage2.contact": "Contact",
+"LandingPage2.discount": "à vie exclusivement avec le code",
+
+
+
+"LandingPage2.userReview": "Vinted Analytics a transformé ma façon de vendre. Je recommande vivement !",
+"LandingPage2.userReviewPro": "Vendeur Pro Vinted",
 
 
 "AnnounceGridDisplay.no_announces": "Trop spécifique, aucune annonce trouvée",
