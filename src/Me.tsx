@@ -120,6 +120,7 @@ if (code) {
       ) : (
        
         <a
+        rel="noreferrer" 
        // onClick={handleDiscordAssociation}
        href="https://discord.com/oauth2/authorize?client_id=1287105058042810428&response_type=code&redirect_uri=https%3A%2F%2Fvinted.loveresell.com%2Fdiscord&scope=identify+guilds.join"
         target="_blank"
