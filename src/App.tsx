@@ -78,6 +78,7 @@ const RedirectDiscord: React.FC = () => {
 
   const lang = localStorage.getItem('locale') || 'en';
   const params = window.location.search;
+  console.log("params",params)
   return <Navigate to={`/${lang}/me${params}`} />;
 }
 

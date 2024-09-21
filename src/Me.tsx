@@ -27,7 +27,7 @@ const MePage = () => {
 
   const fetchDiscordAssociation = async () => {
     try {
-      const response = await axios.get(`${API_URL}/discord`);
+      const response = await axios.get(`${API_URL}/api/discord`);
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching Discord association:', error);
@@ -51,7 +51,7 @@ if (code) {
   // exchange the code for an access token in browser
 
   // request to /discord_token with the code
-  fetch(API_URL + '/discord_token', {
+  fetch(API_URL + '/api/discord_token', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
