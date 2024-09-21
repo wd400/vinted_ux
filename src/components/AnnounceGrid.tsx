@@ -40,7 +40,6 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
           }
         );
 
-        setLoading(false);
 
           setAnnounces(response.data);
         } catch (error) {
@@ -49,6 +48,7 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
       } else {
         setAnnounces(null);
       }
+      setLoading(false);
     };
 
     if (!loading) {
