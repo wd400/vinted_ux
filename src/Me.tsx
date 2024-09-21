@@ -76,6 +76,10 @@ if (code) {
     // redirect to the me page
     
     setDiscordAssociation(true);
+    // open the guild in a new tab
+    window.open(`https://discord.com/channels/${data.guild_id}`, '_blank');
+    
+
   }
   ).catch((error) => {
     console.error('There has been a problem with your fetch operation:', error);
