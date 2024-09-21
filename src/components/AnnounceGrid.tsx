@@ -12,62 +12,53 @@ interface AnnounceGridProps {
 
 const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
   const [announces, setAnnounces] = useState<ISold[] | null>(null);
-  const [loading, setLoading] = useState(false); // Changed to useState
-  const [abortController, setAbortController] = useState<AbortController | null>(null); // To handle cancellation
+  const [loading, setLoading] = useState<boolean>(false); // Use useState for loading
 
   useEffect(() => {
-    // Function to fetch announces
-    const fetchAnnounces = async () => {
-      if (catalogId === null && brandId === null) return;
+    let cancelRequest = false; // For canceling previous request
 
+    const fetchAnnounces = async () => {
       console.log('catalogId:', catalogId);
       console.log('brandId:', brandId);
 
       setLoading(true);
 
-      // Abort any ongoing requests before making a new one
-      if (abortController) {
-        abortController.abort();
-      }
-
-      const controller = new AbortController();
-      setAbortController(controller);
-
       try {
         const response = await axios.post(
-          `${API_URL}/api/top_announces`,
+          `${API_URL}/api/top_announces`, 
           {
-            catalogId: catalogId || undefined,
-            brandId: brandId || undefined,
+            catalogId: catalogId ?? undefined,
+            brandId: brandId ?? undefined,
           },
           {
-            signal: controller.signal, // Attach the abort signal to the request
             withCredentials: true,
           }
         );
 
-        setAnnounces(response.data);
+        if (!cancelRequest) { // Only update state if the request was not canceled
+          setAnnounces(response.data);
+          setLoading(false);
+        }
+
       } catch (error) {
-        if (axios.isCancel(error)) {
-          console.log('Request canceled:', error.message);
-        } else {
+        if (!cancelRequest) { // Handle errors only if not canceled
           console.error('Error fetching announces:', error);
           setAnnounces(null);
+          setLoading(false);
         }
-      } finally {
-        setLoading(false); // Ensure loading state is set to false
       }
     };
 
-    fetchAnnounces();
+    // Trigger the API call if either catalogId or brandId is not null
+    if (catalogId !== null || brandId !== null) {
+      fetchAnnounces();
+    }
 
-    // Clean up the abort controller on component unmount or params change
+    // Cleanup function to cancel the ongoing request
     return () => {
-      if (abortController) {
-        abortController.abort();
-      }
+      cancelRequest = true; // Cancel the ongoing request on param change or unmount
     };
-  }, [catalogId, brandId, abortController]);
+  }, [catalogId, brandId]);
 
   return (
     <>
