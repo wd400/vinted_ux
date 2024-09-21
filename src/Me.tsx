@@ -27,7 +27,10 @@ const MePage = () => {
 
   const fetchDiscordAssociation = async () => {
     try {
-      const response = await axios.get(`${API_URL}/api/discord`);
+      const response = await axios.get(`${API_URL}/api/discord`,
+        {
+          withCredentials: true,
+        });
       console.log(response.data);
     } catch (error) {
       console.error('Error fetching Discord association:', error);
