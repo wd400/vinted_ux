@@ -1,7 +1,5 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import authUtils from '../utils/auth';
 import { useTranslation } from 'react-i18next';
 import { t } from 'i18next';
 import React from 'react';
