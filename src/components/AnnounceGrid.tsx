@@ -12,13 +12,21 @@ interface AnnounceGridProps {
 
 const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
   const [announces, setAnnounces] = useState<ISold[] | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+
+    
     const fetchAnnounces = async () => {
       console.log('catalogId:', catalogId);
       console.log('brandId:', brandId);
+
+
+
+
       if (catalogId !== null || brandId !== null) {
         try {
+
           const response = await axios.post(
             API_URL +
             '/api/top_announces', {
@@ -30,6 +38,9 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
             withCredentials: true,
           }
         );
+
+        setLoading(false);
+
           setAnnounces(response.data);
         } catch (error) {
           console.error('Error fetching announces:', error);
@@ -38,10 +49,22 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
         setAnnounces(null);
       }
     };
-    fetchAnnounces();
-  }, [catalogId, brandId]);
 
-  return <AnnounceGridDisplay announces={announces} />;
+    if (!loading) {
+      setLoading(true);
+      fetchAnnounces();
+    }
+
+  }, [catalogId, brandId, loading]);
+
+  return <>
+  
+  {loading &&           <div className="flex justify-center items-center h-64">
+            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+          </div>
+          }
+  {!loading && <AnnounceGridDisplay announces={announces} />}
+  </>
 };
 
 export default AnnounceGrid;
