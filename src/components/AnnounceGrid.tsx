@@ -16,6 +16,7 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
 
   useEffect(() => {
 
+    setLoading(true);
     
     const fetchAnnounces = async () => {
       console.log('catalogId:', catalogId);
@@ -25,7 +26,7 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
 
 
       if (catalogId !== null || brandId !== null) {
-        setLoading(true);
+        
         try {
 
           const response = await axios.post(
