@@ -51,7 +51,7 @@ const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
       loading.current = false;
     };
 
-    if (!loading.current && catalogId !== null && brandId !== null) {
+    if (!loading.current && (catalogId !== null || brandId !== null)) {
       
       fetchAnnounces();
     }
