@@ -24,21 +24,10 @@ const AnnounceGridDisplay: React.FC<AnnounceGridDisplayProps> = ({ announces }) 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {announces && announces.map((announce, index) => (
           <div key={index} className="border p-4 rounded shadow">
-            <h3 className="text-xl font-bold">{announce.title}</h3>
-            <a href={announce.url} target="_blank" rel="noreferrer">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 inline-block"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 4a6 6 0 1110.36 3.64l-1.5-1.5A4 4 0 1010 6h2a6 6 0 01-4 10.36l-1.5-1.5A4 4 0 018 8V6h2z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </a>
+            <h3 className="text-xl font-bold">{announce.title} <a href={announce.url} target="_blank" rel="noreferrer">
+            ↗️
+            </a></h3>
+            
             <p className="text-gray-500">
               {announce.price.amount} {announce.price.currency_code}
             </p>
