@@ -23,14 +23,7 @@ const MePage = () => {
     }
   }, [lang, i18n]);
 
-  const handleDiscordAssociation = async () => {
-    try {
-      const response = await axios.post(`${API_URL}/discord`, { discordId: 'your-discord-id' });
-      console.log(response.data.message);
-    } catch (error) {
-      console.error('Error associating Discord:', error);
-    }
-  };
+
 
   const fetchDiscordAssociation = async () => {
     try {
@@ -78,7 +71,7 @@ if (code) {
     setDiscordAssociation(true);
     // open the guild in a new tab
     window.open(`https://discord.com/channels/${data.guild_id}`, '_blank');
-    
+
 
   }
   ).catch((error) => {
