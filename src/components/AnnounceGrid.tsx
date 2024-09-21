@@ -1,7 +1,7 @@
 'use client';
 import { ISold } from './models/sold';
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnnounceGridDisplay from './AnnounceGridDisplay';
 import { API_URL } from '../config';
 
@@ -12,60 +12,73 @@ interface AnnounceGridProps {
 
 const AnnounceGrid: React.FC<AnnounceGridProps> = ({ catalogId, brandId }) => {
   const [announces, setAnnounces] = useState<ISold[] | null>(null);
-  let loading = useRef(false);
+  const [loading, setLoading] = useState(false); // Changed to useState
+  const [abortController, setAbortController] = useState<AbortController | null>(null); // To handle cancellation
 
   useEffect(() => {
-
-    
+    // Function to fetch announces
     const fetchAnnounces = async () => {
+      if (catalogId === null && brandId === null) return;
+
       console.log('catalogId:', catalogId);
       console.log('brandId:', brandId);
 
+      setLoading(true);
 
-        loading.current = true;
+      // Abort any ongoing requests before making a new one
+      if (abortController) {
+        abortController.abort();
+      }
 
-        try {
+      const controller = new AbortController();
+      setAbortController(controller);
 
-          const response = await axios.post(
-            API_URL +
-            '/api/top_announces', {
-              catalogId: catalogId? catalogId : undefined,
-              brandId: brandId? brandId : undefined,
-          },
-        
+      try {
+        const response = await axios.post(
+          `${API_URL}/api/top_announces`,
           {
+            catalogId: catalogId || undefined,
+            brandId: brandId || undefined,
+          },
+          {
+            signal: controller.signal, // Attach the abort signal to the request
             withCredentials: true,
           }
         );
 
-
-          setAnnounces(response.data);
-          
-        } catch (error) {
+        setAnnounces(response.data);
+      } catch (error) {
+        if (axios.isCancel(error)) {
+          console.log('Request canceled:', error.message);
+        } else {
           console.error('Error fetching announces:', error);
-
-        setAnnounces(null);
+          setAnnounces(null);
         }
-     
-      
-      loading.current = false;
+      } finally {
+        setLoading(false); // Ensure loading state is set to false
+      }
     };
 
-    if (!loading.current && (catalogId !== null || brandId !== null)) {
-      
-      fetchAnnounces();
-    }
+    fetchAnnounces();
 
-  }, [catalogId, brandId]);
+    // Clean up the abort controller on component unmount or params change
+    return () => {
+      if (abortController) {
+        abortController.abort();
+      }
+    };
+  }, [catalogId, brandId, abortController]);
 
-  return <>
-  
-  {loading.current &&           <div className="flex justify-center items-center h-64">
-            <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
-          </div>
-          }
-  {!loading.current && <AnnounceGridDisplay announces={announces} />}
-  </>
+  return (
+    <>
+      {loading && (
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-primary"></div>
+        </div>
+      )}
+      {!loading && <AnnounceGridDisplay announces={announces} />}
+    </>
+  );
 };
 
 export default AnnounceGrid;
