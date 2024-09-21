@@ -7,8 +7,9 @@ import { t } from 'i18next';
 import React from 'react';
 import { useParams } from 'react-router-dom';
 
-const ProStatus = () => {
-  const [isPro, setIsPro] = useState<boolean | null>(null);
+const ProStatus = (
+  { isPro }: { isPro: boolean | null }
+) => {
 
   const { lang } = useParams<{ lang: string }>();
 const { i18n } = useTranslation();
@@ -18,11 +19,6 @@ React.useEffect(() => {
   }
 }, [lang, i18n]);
 
-  useEffect(() => {
-    authUtils.useSession().then((session) => {
-      setIsPro(session.is_pro);
-    });
-  }, []);
 
   if (isPro === null) {
     return <div className="text-center text-gray-500">{t('ProStatus.loading')}</div>;

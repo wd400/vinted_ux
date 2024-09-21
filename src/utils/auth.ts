@@ -56,6 +56,7 @@ async function signIn(email: string,locale:string): Promise<boolean> {
 interface CheckTokenResponse {
     is_pro: boolean ;
     status: 'authenticated' | 'unauthenticated';
+ //   discordId?: string;
 }
 
 function checkToken(token:string|undefined) : CheckTokenResponse {

@@ -5,6 +5,7 @@ interface IUser extends Document {
   email: string;
   emailVerified: Date;
   pro_until: Number;
+  discordId: string;
   taxId: string;
 
 }
@@ -14,6 +15,7 @@ customerId: {type: String},
   pro_until: {type: Number, required: true, min: 0,
     default: 0,
   },
+  discordId: {type: String, required: false},
   email: {type: String, required: true,
     unique: true,
 

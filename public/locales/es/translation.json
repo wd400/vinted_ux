@@ -1,8 +1,6 @@
 {
   "welcome": "¡Bienvenido a React con i18n y Tailwind CSS!",
-
-
-    "LandingPage2.title": "Vinted Analytics",
+  "LandingPage2.title": "Vinted Analytics",
   "LandingPage2.newBadge": "Nuevo",
   "LandingPage2.subtitle": "Boost tu Vinted como un Pro",
   "LandingPage2.featuresSectionTitle": "Responde a todas tus preguntas con datos",
@@ -31,15 +29,9 @@
   "LandingPage2.noCommitmentSubscription": "suscripción sin compromiso",
   "LandingPage2.faq": "Preguntas frecuentes",
   "LandingPage2.contact": "Contacto",
-
-
   "LandingPage2.discount": "de por vida exclusivamente con el código",
-
-
-
   "LandingPage2.userReview": "Vinted Analytics transformó la forma en que vendo. ¡Altamente recomendado!",
   "LandingPage2.userReviewPro": "Vendedor Pro de Vinted",
-
   "LandingPage.title": "LoveResell",
   "LandingPage.newBadge": "Nuevo",
   "LandingPage.subtitle": "Boost tu Vinted como un Pro",
@@ -69,65 +61,47 @@
   "LandingPage.noCommitmentSubscription": "suscripción sin compromiso",
   "LandingPage.faq": "Preguntas frecuentes",
   "LandingPage.contact": "Contacto",
-
-
   "LandingPage.discount": "de por vida exclusivamente con el código",
-
-
-
   "LandingPage.userReview": "Vinted Analytics transformó la forma en que vendo. ¡Altamente recomendado!",
   "LandingPage.userReviewPro": "Vendedor Pro de Vinted",
-
   "AnnounceGridDisplay.no_announces": "Demasiado específico, no se encontraron anuncios",
-
   "BrandSelector.select_brand": "Seleccionar una marca",
   "BrandSelector.search_placeholder": "Buscar una marca",
   "BrandSelector.loading": "Cargando...",
-
   "CatalogSelector.heading": "Seleccionar un catálogo",
   "CatalogSelector.selectButton": "Seleccionar",
   "CatalogSelector.backButton": "Atrás",
-
   "FeatureCard.proFeature": "Función Pro",
-
   "ImageGallery.show_more": "Mostrar más",
   "ImageGallery.show_less": "Mostrar menos",
-
   "LoginButton.login_button_text": "Registrate | Inicia sesión",
-
   "LoginPopup.log_in": "Iniciar sesión",
   "LoginPopup.email_placeholder": "Correo electrónico",
   "LoginPopup.loading": "Cargando...",
   "LoginPopup.check_your_email": "¡Revisa tu correo electrónico! ⤴",
   "LoginPopup.send_magic_link": "Enviar enlace mágico",
-
   "PriceDistributionChart.quantity": "Cantidad",
   "PriceDistributionChart.priceDistributionTitle": "Histograma de distribución de precios de artículos vendidos",
   "PriceDistributionChart.notEnoughData": "Aún no hay suficientes datos para mostrar la distribución de precios",
-
   "ProStatus.loading": "Cargando...",
   "ProStatus.proUser": "¡Eres un usuario Pro!",
   "ProStatus.manageAccount": "Gestiona tu cuenta",
   "ProStatus.notProUser": "No eres un usuario Pro",
   "ProStatus.unlockAnalytics": "Desbloquear Vinted Analytics",
-
   "Navigation.Analytics": "Analíticas",
   "Navigation.MoveToVinted": "Ir a Vinted",
   "Navigation.MyStatus": "Mi estado",
   "Navigation.Logout": "Cerrar sesión",
-
   "ExpensiveProducts.title": "Productos caros",
   "ExpensiveProducts.selectTimeFrame": "Seleccionar período de tiempo:",
   "ExpensiveProducts.weekly": "Semanal",
   "ExpensiveProducts.monthly": "Mensual",
   "ExpensiveProducts.yearly": "Anual",
-
   "ColorTrends.title": "Progresión de colores populares",
   "ColorTrends.dashboardTitle": "Colores populares",
   "ColorTrends.aggregationType": "Tipo de agregación",
   "ColorTrends.week": "Semana",
   "ColorTrends.month": "Mes",
-
   "BrandSales.trendTitle": "Tendencia de ventas por marca",
   "BrandSales.lastMonthSales": "Ventas del mes pasado",
   "BrandSales.avgPreviousThreeMonthsSales": "Promedio de ventas de los últimos tres meses",
@@ -138,9 +112,9 @@
   "BrandSales.salesDifferenceColumn": "Diferencia de ventas",
   "Sidebar.latestSoldItemsTitle": "Últimos artículos vendidos",
   "Sidebar.subtitleFor": "para",
-
   "AccountPage.title": "Mi cuenta",
-
+  "AccountPage.associate_discord": "Asociar Discord",
+  "AccountPage.discord_associated": "Discord asociado",
   "mostExpensiveBrands.title": "Marcas más caras",
   "mostExpensiveBrands.description": "Marcas más caras basadas en el precio promedio de los artículos vendidos en Vinted el año pasado.",
   "mostExpensiveBrands.brand": "Marca",
@@ -148,10 +122,8 @@
   "mostExpensiveBrands.quantity": "Cantidad",
   "sidebar.latestItemsFor": "Últimos artículos para",
   "sidebar.latestItems": "Últimos artículos",
-
   "PriceEstimation.title": "Estimación de precios",
   "PriceEstimation.sidebarTitle": "Últimos artículos vendidos",
-
   "SalesTrendDashboard.title": "Productos más vendidos",
   "SalesTrendDashboard.last_3_days": "Últimos 3 días",
   "SalesTrendDashboard.last_30_days": "Últimos 30 días",
@@ -179,9 +151,7 @@
   "SalesTrendDashboard.error_latest": "Error al obtener los últimos productos:",
   "SalesTrendDashboard.sidebar_title": "Últimos artículos vendidos",
   "SalesTrendDashboard.sidebar_subtitle": "Selecciona un vendedor",
-
   "TopAnnounces.title": "Top anuncios",
-
   "TopPerformers.title": "Mejores vendedores",
   "TopPerformers.last3Days": "Últimos 3 días",
   "TopPerformers.last30Days": "Últimos 30 días",
@@ -194,11 +164,11 @@
   "TopPerformers.selectPerformer": "Selecciona un vendedor",
   "TopPerformers.unknownUser": "N/D",
   "TopPerformers.chartTitle": "Mejores vendedores por {{orderBy}}",
-
   "ThanksPage.title": "¡Bravo, su cuenta está en proceso de activación!",
-"ThanksPage.subtitle": "Recibirá un correo electrónico de activación en breve.",
-"ThanksPage.whatsapp": "Para obtener asistencia, contáctenos directamente en WhatsApp:",
-"ThanksPage.cta": "Volver a la página de inicio"
-
-
+  "ThanksPage.subtitle": "Recibirá un correo electrónico de activación en breve.",
+  "ThanksPage.whatsapp": "Para obtener asistencia, contáctenos directamente en WhatsApp:",
+  "ThanksPage.cta": "Volver a la página de inicio",
+  "AccountPage": {
+    "associate_discord": ""
+  }
 }
