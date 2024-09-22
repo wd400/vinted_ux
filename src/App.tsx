@@ -126,7 +126,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<RedirectLang/>} />
           <Route path="/thanks" element={<RedirectThanks/>} />
-          <Route path="/discord?code=:code"
+          <Route path="/discord"
            element={<RedirectDiscord/>} />
           <Route path="/:lang/thanks" element={<ThanksPage/>} />
           <Route path="/:lang" element={<LandingPage />} />
