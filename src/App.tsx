@@ -1,6 +1,6 @@
 // src/App.tsx
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes,  useParams, useLocation, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,  useParams, useLocation, Navigate, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LandingPage from './lp';
 import ProvidedNavigation from './components/ProvidedNavigation';
@@ -73,10 +73,12 @@ const RedirectThanks: React.FC = () => {
   return <Navigate to={`/${lang}/thanks`} />;
 };
 
-const RedirectDiscord: React.FC = () => {
+const  RedirectDiscord: React.FC = () => {
   const lang = localStorage.getItem('locale') || 'en';
+  const navigate = useNavigate();
 
-  useEffect(() => {
+
+
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
     console.log('code:', urlParams);
@@ -100,14 +102,20 @@ const RedirectDiscord: React.FC = () => {
         .then((data) => {
           console.log(data);
           window.open(`https://discord.com/channels/${guild_id}`, '_blank');
+          
+          //use router to redirect to /me
+          navigate(`/${lang}/me`);
+        
+
         })
         .catch((error) => {
           console.error('There has been a problem with your fetch operation:', error);
         });
     }
-  }, []);
 
-  return <Navigate to={`/${lang}/`} />;
+    return  <div>Redirecting...</div>
+
+
 };
 
 
