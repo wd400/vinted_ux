@@ -45,6 +45,7 @@ module.exports = {
           secondary: '#d4baa6',
           secondaryDark: '#553929',
           secondaryLight: '#f7f5f2',
+          discord: '#7289da',
         
         destructive: {
           DEFAULT: "hsl(var(--destructive))",

@@ -131,12 +131,13 @@ if (code) {
         className="text-primary text-xl font-semibold mb-4" rel="noreferrer">{t('AccountPage.discord_associated')}</a>
       ) : (
        
+        // color #7289da
         <a
         rel="noreferrer" 
        // onClick={handleDiscordAssociation}
        href="https://discord.com/oauth2/authorize?client_id=1287105058042810428&response_type=code&redirect_uri=https%3A%2F%2Fvinted.loveresell.com%2Fdiscord&scope=identify+guilds.join"
         target="_blank"
-        className="px-4 py-2 rounded-md text-white bg-blue-600 hover:bg-blue-700"
+        className="px-4 py-2 rounded-md text-white bg-discord font-semibold" 
       >
         {t('AccountPage.associate_discord')}
       </a>
