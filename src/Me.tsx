@@ -116,9 +116,7 @@ if (code) {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4">{t('AccountPage.title')}</h1>
-      <ProStatus 
-      isPro={isPro}
-      />
+
 
 {
   discordAssociation !== null && (
@@ -146,6 +144,10 @@ if (code) {
     </div>
   )
 }
+
+<ProStatus 
+      isPro={isPro}
+      />
 
 
     </div>
