@@ -78,6 +78,8 @@ const  RedirectDiscord: React.FC = () => {
   const navigate = useNavigate();
 
 
+  useEffect(() => {
+
 
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get('code');
@@ -112,6 +114,8 @@ const  RedirectDiscord: React.FC = () => {
           console.error('There has been a problem with your fetch operation:', error);
         });
     }
+  }
+  , []);
 
     return  <div>Redirecting...</div>
 
