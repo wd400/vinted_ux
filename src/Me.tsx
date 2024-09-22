@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { t } from 'i18next';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { API_URL } from './config';
+import { API_URL, guild_id } from './config';
 import authUtils from './utils/auth';
 
 const MePage = () => {
@@ -78,7 +78,7 @@ if (code) {
     
     setDiscordAssociation(true);
     // open the guild in a new tab
-    window.open(`https://discord.com/channels/${data.guild_id}`, '_blank');
+    window.open(`https://discord.com/channels/${guild_id}`, '_blank');
 
 
   }
@@ -123,8 +123,12 @@ if (code) {
 {
   discordAssociation !== null && (
     <div className="p-6 bg-secondaryLight rounded-lg shadow-lg text-center">
-      {discordAssociation ? (
-        <p className="text-primary text-xl font-semibold mb-4">{t('AccountPage.discord_associated')}</p>
+      {discordAssociation ? ( <a 
+        
+       href={`https://discord.com/channels/${guild_id}`}
+        target="_blank"
+
+        className="text-primary text-xl font-semibold mb-4" rel="noreferrer">{t('AccountPage.discord_associated')}</a>
       ) : (
        
         <a
