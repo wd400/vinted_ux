@@ -99,6 +99,8 @@ const App: React.FC = () => {
           <Route path="/" element={<RedirectLang/>} />
           <Route path="/thanks" element={<RedirectThanks/>} />
           <Route path="/discord" element={<RedirectDiscord/>} />
+          <Route path="/:lang/me?*" element={<MePage />} />
+
           <Route path="/:lang/thanks" element={<ThanksPage/>} />
           <Route path="/:lang" element={<LandingPage />} />
           <Route path="/:lang/login" element={<Login />} />
