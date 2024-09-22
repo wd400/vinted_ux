@@ -21,7 +21,7 @@ import ThanksPage from './Thanks';
 import HotBrands from './HotBrands';
 
 import MostExpensiveBrands from './MostExpensiveBrand';
-import { API_URL } from './config';
+import { API_URL, guild_id } from './config';
 
 // const Home = () => {
 //   const { t } = useTranslation();
@@ -79,7 +79,56 @@ const RedirectDiscord: React.FC = () => {
   const lang = localStorage.getItem('locale') || 'en';
   const params = window.location.search;
   console.log("params",params)
-  return <Navigate to={`/${lang}/me${params}`} />;
+
+
+  useEffect(() => {
+
+const urlParams = new URLSearchParams(window.location.search);
+const code = urlParams.get('code');
+console.log('code:', urlParams);
+if (code) {
+console.log('code:', code);
+
+
+fetch(API_URL + '/api/discord_token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({ code }),
+  credentials: 'include',
+}).then((response) => {
+  if (response.ok) {
+    return response.json();
+  }
+  throw new Error('Network response was not ok.');
+}
+).then((data) => {
+  console.log(data);
+  
+  window.open(`https://discord.com/channels/${guild_id}`, '_blank');
+
+
+}
+).catch((error) => {
+  console.error('There has been a problem with your fetch operation:', error);
+}
+);
+}
+
+
+
+}, []);
+
+
+
+
+
+
+
+
+
+  return <Navigate to={`/${lang}/`} />;
 }
 
 

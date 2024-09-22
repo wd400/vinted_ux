@@ -51,44 +51,7 @@ const MePage = () => {
   // code=30GThmkrp021Uu3k9HEMGLfjgQtTnB
 
   // get code from the url and exchange it for an access token if specified
-const urlParams = new URLSearchParams(window.location.search);
-const code = urlParams.get('code');
-console.log('code:', urlParams);
-if (code) {
-  console.log('code:', code);
 
-  // exchange the code for an access token in browser
-
-  // request to /discord_token with the code
-  fetch(API_URL + '/api/discord_token', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({ code }),
-    credentials: 'include',
-  }).then((response) => {
-    if (response.ok) {
-      return response.json();
-    }
-    throw new Error('Network response was not ok.');
-  }
-  ).then((data) => {
-    console.log(data);
-    // redirect to the me page
-    
-    setDiscordAssociation(true);
-    // open the guild in a new tab
-    window.open(`https://discord.com/channels/${guild_id}`, '_blank');
-
-
-  }
-  ).catch((error) => {
-    console.error('There has been a problem with your fetch operation:', error);
-  }
-  );
-}
-  
 
 
 
