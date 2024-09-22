@@ -32,6 +32,11 @@ const MePage = () => {
           withCredentials: true,
         });
       console.log(response.data);
+      if (response.data.discordId) {
+        setDiscordAssociation(true);
+      } else {
+        setDiscordAssociation(false);
+      }
     } catch (error) {
       console.error('Error fetching Discord association:', error);
     }
