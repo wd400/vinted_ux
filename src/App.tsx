@@ -74,62 +74,41 @@ const RedirectThanks: React.FC = () => {
 };
 
 const RedirectDiscord: React.FC = () => {
-  //get all url params
-
   const lang = localStorage.getItem('locale') || 'en';
-  const params = window.location.search;
-  console.log("params",params)
-
 
   useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code');
+    console.log('code:', urlParams);
+    if (code) {
+      console.log('code:', code);
 
-const urlParams = new URLSearchParams(window.location.search);
-const code = urlParams.get('code');
-console.log('code:', urlParams);
-if (code) {
-console.log('code:', code);
-
-
-fetch(API_URL + '/api/discord_token', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({ code }),
-  credentials: 'include',
-}).then((response) => {
-  if (response.ok) {
-    return response.json();
-  }
-  throw new Error('Network response was not ok.');
-}
-).then((data) => {
-  console.log(data);
-  
-  window.open(`https://discord.com/channels/${guild_id}`, '_blank');
-
-
-}
-).catch((error) => {
-  console.error('There has been a problem with your fetch operation:', error);
-}
-);
-}
-
-
-
-}, []);
-
-
-
-
-
-
-
-
+      fetch(API_URL + '/api/discord_token', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ code }),
+        credentials: 'include',
+      })
+        .then((response) => {
+          if (response.ok) {
+            return response.json();
+          }
+          throw new Error('Network response was not ok.');
+        })
+        .then((data) => {
+          console.log(data);
+          window.open(`https://discord.com/channels/${guild_id}`, '_blank');
+        })
+        .catch((error) => {
+          console.error('There has been a problem with your fetch operation:', error);
+        });
+    }
+  }, []);
 
   return <Navigate to={`/${lang}/`} />;
-}
+};
 
 
 
@@ -147,7 +126,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<RedirectLang/>} />
           <Route path="/thanks" element={<RedirectThanks/>} />
-          <Route path="/discord" element={<RedirectDiscord/>} />
+          <Route path="/discord?code=:code"
+           element={<RedirectDiscord/>} />
           <Route path="/:lang/thanks" element={<ThanksPage/>} />
           <Route path="/:lang" element={<LandingPage />} />
           <Route path="/:lang/login" element={<Login />} />
