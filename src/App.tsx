@@ -73,15 +73,13 @@ const RedirectThanks: React.FC = () => {
   return <Navigate to={`/${lang}/thanks`} />;
 };
 
-const RedirectDiscord: React.FC<{code?:string}> = (
-  {code}
-  ) => {
+const RedirectDiscord: React.FC = () => {
   //get all url params
 
   const lang = localStorage.getItem('locale') || 'en';
   const params = window.location.search;
   console.log("params",params)
-  return <Navigate to={`/${lang}/me?code=${code}`} />;
+  return <Navigate to={`/${lang}/me${params}`} />;
 }
 
 
@@ -101,12 +99,10 @@ const App: React.FC = () => {
           <Route path="/" element={<RedirectLang/>} />
           <Route path="/thanks" element={<RedirectThanks/>} />
           <Route path="/discord" element={<RedirectDiscord/>} />
-          <Route path="/discord?code=:code" element={<RedirectDiscord/>} />
           <Route path="/:lang/thanks" element={<ThanksPage/>} />
           <Route path="/:lang" element={<LandingPage />} />
           <Route path="/:lang/login" element={<Login />} />
           <Route path="/:lang/me" element={<MePage />} />
-          <Route path="/:lang/me?code=:code" element={<MePage />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/:lang/hot-brands" element={<HotBrands />} />
 

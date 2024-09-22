@@ -53,6 +53,7 @@ const MePage = () => {
   // get code from the url and exchange it for an access token if specified
 const urlParams = new URLSearchParams(window.location.search);
 const code = urlParams.get('code');
+console.log('code:', urlParams);
 if (code) {
   console.log('code:', code);
 
