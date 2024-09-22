@@ -74,11 +74,14 @@ const RedirectThanks: React.FC = () => {
 };
 
 const  RedirectDiscord: React.FC = () => {
-  const lang = localStorage.getItem('locale') || 'en';
+
   const navigate = useNavigate();
 
-
   useEffect(() => {
+
+    const lang = localStorage.getItem('locale') || 'en';
+
+  
 
 
     const urlParams = new URLSearchParams(window.location.search);
@@ -115,7 +118,7 @@ const  RedirectDiscord: React.FC = () => {
         });
     }
   }
-  , []);
+  , [ navigate]);
 
     return  <div>Redirecting...</div>
 
