@@ -28,7 +28,7 @@ const LocaleSwitcher: React.FC = () => {
     }
 
     // check if the lang is in the list of supported languages
-    if (lang && !['en', 'fr', 'es'].includes(lang)) {
+    if (lang && !['en', 'fr'].includes(lang)) { // , 'es'
       navigate('/en');
       i18n.changeLanguage('en');
       lang='en';
@@ -62,7 +62,7 @@ const [currentLocale, setCurrentLocale] = React.useState(lang || 'en');
       selectedLocale={currentLocale || 'en'}
       onSelectChange={handleLocaleChange}
     >
-      {['en', 'fr', 'es'].map((cur) => (
+      {['en', 'fr'].map((cur) => ( //  'es'
         <option key={cur} value={cur}>
          {cur.toUpperCase()}
         </option>

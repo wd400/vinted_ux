@@ -9,7 +9,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'fr', 'es'], // Supported languages
+    supportedLngs: ['en', 'fr'], // Supported languages , 'es'
     fallbackLng: 'en',
     detection: {
       order: ['path', 'cookie', 'localStorage', 'navigator'],

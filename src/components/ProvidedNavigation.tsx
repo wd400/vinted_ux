@@ -132,7 +132,7 @@ function ProvidedNavigation2() {
                         'en':'com',
                         'fr':'fr',
                         'de':'de',
-                        'es':'es',
+                  //      'es':'es',
                       }
                       // check if the language is supported
                       const vinted_extension= extension[i18n.language] || 'com';
